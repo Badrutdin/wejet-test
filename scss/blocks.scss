@@ -1,0 +1,361 @@
+.block-1 {
+  min-height: 100vh;
+  background-color: #000000;
+  background-repeat: no-repeat;
+  background-size: 110% 110%;
+
+  &__block-title {
+    font-size: 80px;
+    line-height: 90px;
+    margin: 0 auto;
+    width: 810px;
+  }
+
+  &__astronaut {
+    position: absolute;
+    width: 256px;
+    left: 1060px;
+    top: 160px;
+    z-index: 1;
+
+    img {
+      width: 100%;
+      z-index: 2;
+    }
+  }
+
+  &__small-text {
+    width: 630px;
+    margin: 30px auto 0;
+  }
+
+  &__ready {
+    color: #ffffff;
+    text-decoration: none;
+
+    span {
+      display: block;
+    }
+
+    svg {
+      transition: $transition_speed;
+    }
+
+    &:hover svg, &:focus svg {
+      transform: translateY(20px);
+    }
+
+    &:hover {
+      color: #fff;
+    }
+  }
+}
+
+.block-2 {
+  background-color: #EEF5F6;
+  .open_form{
+    &:hover{
+      & svg {
+        transition: $transition_speed;
+        margin-left: 3%;
+      }
+    }
+  }
+  &__block-title {
+    width: 800px;
+  }
+
+  &__left {
+    span {
+      word-break: break-word;
+      display: block;
+      width: 570px;
+    }
+  }
+
+  &__right {
+    position: relative;
+
+    .text {
+      width: 450px;
+      margin-bottom: 40px;
+    }
+
+    span {
+      letter-spacing: 0;
+      bottom: 0;
+      color: #00CAE5;
+    }
+  }
+
+  &__small-text {
+    color: #222222;
+
+    a {
+      text-decoration: none;
+      color: red;
+
+      &:visited {
+        color: inherit;
+      }
+    }
+  }
+}
+
+.block-3 {
+  background-color: #222222;
+  &__right {
+  }
+
+  &__small-text {
+    margin-top: 50px;
+    width: 450px;
+  }
+
+  &__left {
+    padding: 0;
+    background-color: #4A2B39;
+    background-image: url('../photos/nasa-rTZW4f02zY8-unsplash-resize.jpg');
+    background-size: cover;
+    background-position: 0, 0, 0, 100px, 0, 0;
+    background-repeat: no-repeat;
+  }
+
+  &__text {
+  }
+
+  &__block-title {
+    width: 500px;
+  }
+
+}
+
+.block_4 {
+  background: linear-gradient(160deg, rgba(0,0,0,0) 50%, rgba(0,0,0,0) 50%, rgba(238,245,246,1) 50%);
+
+  .cards {
+    .card {
+      border: none; // откуда рамка?
+      width: min-content;
+
+      &__title {
+        font: 40px/45px Russo One;
+        word-break: break-word;
+        width: 300px;
+      }
+
+      &__text {
+        background-color: #EEF5F6;
+        color: rgba(255, 255, 255, .7);
+        letter-spacing: 0.8px;
+        padding-left: 20px;
+        padding-top: 160px;
+        width: 354px;
+        height: 500px;
+        object-fit: cover;
+        background-position: 0, 0, 0, 100px, 0, 0;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        transition: $transition_speed;
+
+        &:hover, &:focus {
+          transform: translateY(-20px);
+          box-shadow: 10px 10px 30px 1px rgb(0 77 88 / 44%);
+          color: rgba(255, 255, 255, 1);
+          cursor: pointer;
+
+          .small-text {
+            color: rgba(255, 255, 255, 1); // нужно ли создавать вложенность в HTML и прописать & .small-text?
+          }
+        }
+      }
+
+      &__small-text {
+        margin-top: 20px;
+      }
+    }
+  }
+}
+
+.block_5 {
+  background: #222222;
+
+  .monitor-text {
+    &_top {
+      margin: 50px auto -100px;
+      width: 540px;
+    }
+
+    &_bottom {
+      margin: -100px auto 50px;
+      width: 600px;
+    }
+  }
+
+  .block-title {
+    width: 700px;
+    margin: 0 auto;
+  }
+
+  .tickers {
+    &__ticker {
+      font: 60px/70px Russo One;
+      letter-spacing: 1.2px;
+      color: #555555;
+      width: 300%;
+
+      span {
+        color: #00CAE5;
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  .icons {
+    padding-top: 200px;
+    color: #A3B9C2;
+
+    &__icon:hover, &__icon:focus {
+      color: #ffffff;
+      cursor: pointer;
+
+      &__icon-line {
+        opacity: 1;
+      }
+
+      & .icons__icon-description {
+        color: #ffffff;
+      }
+    }
+    &__icon-svg {
+      margin-bottom: 20px;
+    }
+
+    &__icon-title {
+      font: 30px/40px Russo One;
+      letter-spacing: 0.6px;
+      margin-bottom: 10px;
+    }
+
+    &__icon-line {
+      opacity: 0;
+      width: 50%;
+      border: 1px solid white;
+      margin-left: 25%;
+      margin-top: 40px;
+    }
+  }
+
+}
+
+.block_6 {
+  .block-title {
+    margin-top: 200px;
+    margin-bottom: 100px;
+  }
+
+  .slider_container {
+    font: normal normal italic 30px/50px Montserrat;
+    letter-spacing: 0px;
+    color: #222222;
+    margin-bottom: 200px;
+    margin-left: 300px;
+    width: max-content;
+
+    .slide {
+      width: 700px;
+      display: inline-block;
+      margin-right: 200px;
+
+      .slide_bottom {
+        font-size: 20px;
+        line-height: 50px;
+        margin-top: 70px;
+      }
+
+      &.hidden {
+        opacity: .1;
+      }
+
+      &.active {
+      }
+
+      &.right {
+        opacity: .5;
+      }
+    }
+  }
+}
+
+.block_7 {
+  background: #222222;
+
+  .content {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    font: 60px/70px Russo One;
+    letter-spacing: 1.2px;
+    color: #ffffff;
+    background-image: url('../photos/nasa-pd4lo70LdbI-unsplash-resize.png');
+    object-fit: cover;
+    background-position-x: 100%;
+    background-position-y: 50%;
+    background-repeat: no-repeat;
+    //background-size: 500px;
+    position: relative;
+  }
+
+  .layer {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    background: rgba(255, 255, 255, 0.134);
+  }
+
+  .block-title {
+    width: 700px;
+  }
+  .form {
+    position: absolute;
+    background: red;
+    height: 100%;
+    width: 100%;
+    z-index: -10;
+  }
+  .form-btn{
+    position: relative;
+    font: 16px/50px Montserrat;
+    color: #FFFFFF;
+    border: 1px solid #FFFFFF;
+    width: 350px;
+    height: 70px;
+    transition: $transition_speed ease-out, background-color 0s;
+
+    &::before{
+      transition: $transition_speed ease-out;
+
+      content: '';
+      position: absolute;
+      border-right: 1px solid #FFFFFF;
+      border-bottom: 1px solid #FFFFFF;
+      height: 100%;
+      width: 100%;
+      left: 15px;
+      top: 10px;
+    }
+    &:hover{
+      transform: translateX(10px) translateY(5px);
+      background-color: #FFFFFF;
+      color: black;
+      &:before{
+        left: 5px;
+        top: 5px;
+      }
+    }
+  }
+}
