@@ -1,503 +1,527 @@
-@media (max-width: 1366px) {
-  .block_1 {
-    background-position-y: 40%;
-    background-size: 120% 140%;
-
-    .astronaut {
-      left: 790px;
-    }
+@media (min-width: 320px) and (max-width: 768px) {
+  .container {
+    max-width: 100%;
   }
-  .block_2 {
-    .block_title {
-      width: 600px;
-    }
+  .row {
+    margin: 0 auto;
   }
-  .block_3 {
-    .left {
-      background-size: 116% 100%;
-    }
+  .block-3__left {
+    margin: -4%;
   }
 }
 
-@media (max-width: 1024px) {
-  .block_title {
+@media (min-width: 640px) {
+  header {
+    padding-top: 15px;
+
+    .logo {
+      margin: 0;
+      width: 172px;
+    }
+
+    .menu-top {
+      padding: 0;
+      margin: 0;
+    }
+  }
+
+  .block-1 {
+
+    &__block-title {
+      width: 400px;
+    }
+
+    &__astronaut {
+      left: 375px;
+      top: 80px;
+    }
+
+    &__small-text {
+      width: 530px;
+    }
+  }
+
+  .block-2 {
+
+    &__block-title {
+      width: 570px;
+    }
+
+    &__right {
+      .text {
+        width: 570px;
+      }
+    }
+  }
+
+  .block-3 {
+
+    &__small-text {
+      width: 600px;
+    }
+
+  }
+
+  .block_4 {
+    .cards {
+      .card {
+        width: 576px;
+        height: 200px;
+
+        &__title {
+          width: 600px;
+        }
+
+        &__small-text {
+          width: 550px;
+        }
+      }
+    }
+  }
+
+  .block-5 {
+    background: #222222;
+
+    .monitor-text {
+      &_top {
+        width: 510px;
+      }
+
+      &_bottom {
+        width: 600px;
+      }
+    }
+
+    &__block-tittle {
+      width: 400px;
+    }
+
+    .tickers {
+      &__ticker {
+        font-size: 50px;
+        line-height: 70px;
+        letter-spacing: 1px;
+      }
+    }
+
+    .icons {
+
+      &__icon-description {
+        width: 470px;
+      }
+    }
+
+  }
+
+  .block_7 {
+
+    .block-title {
+      width: 400px;
+    }
+
+    .form-btn {
+      width: 263px;
+    }
+  }
+
+  .footer {
+
+    &__small-text {
+      width: 300px;
+    }
+  }
+
+
+}
+
+@media (min-width: 768px) {
+  header {
+    padding-top: 30px;
+
+    .logo {
+      width: 192px;
+    }
+  }
+  .section {
+    &__row-content, &__col-content {
+      padding-top: 100px;
+      padding-bottom: 100px;
+    }
+
+    &__col-content {
+      padding-top: 100px;
+      padding-bottom: 100px;
+    }
+  }
+  .block-title {
     font-size: 50px;
     line-height: 60px;
   }
-  .block_1 {
-    background-position-y: 50%;
-    background-size: 120% 140%;
 
-    .astronaut {
-      top: 170px;
-      left: 620px;
-    }
-  }
-  .block_2 {
-    .block_title {
-      width: 560px;
-    }
 
-    .left {
-      span {
-        width: 450px;
-      }
-    }
-  }
-  .block_4 {
-    .card {
-      .text {
-        width: 290px;
-        height: 464px;
-      }
+  .block-1 {
 
-      .title {
-        font-size: 30px;
-        line-height: 35px;
-        width: 250px;
-      }
-
-      .small-text {
-        width: 250px;
-      }
-    }
-  }
-  .block_5 {
-    .monitor-text {
-      &.top {
-        margin: 50px auto -50px;
-      }
-
-      &.bottom {
-        margin: -50px auto 50px;
-      }
-    }
-
-    .block_title {
-      width: 600px;
-    }
-  }
-  footer {
-    .title {
-      font-size: 50px;
-      line-height: 60px;
-    }
-  }
-}
-
-@media (max-width: 768px) {
-  .block_title {
-    letter-spacing: 1.4px;
-  }
-  .block_1 {
-    .nav_item {
-      width: 380px;
-    }
-
-    .astronaut {
-      top: 290px;
-      left: 480px;
-    }
-
-    .content {
-      margin-top: 300px;
-    }
-
-    .title h1, .title span {
+    &__block-title {
+      padding-top: 200px;
       font-size: 70px;
       line-height: 85px;
       letter-spacing: 1.4px;
       width: 700px;
     }
+
+    &__astronaut {
+      width: 258px;
+      left: 470px;
+      top: 260px;
+    }
+
   }
-  .block_2 {
-    .left {
-      span {
-        width: 480px;
-      }
+
+  .block-2 {
+
+    &__block-title {
+      width: 450px;
     }
 
-    .row {
-      padding-top: 100px;
-      padding-bottom: 100px;
-    }
-
-    .right {
+    &__right {
       .text {
-        margin-top: 40px;
-      }
-    }
-
-    .right {
-      span {
-        position: static;
+        width: 450px;
       }
     }
   }
-  .block_3 {
-    .row {
-      flex-direction: column-reverse;
+
+  .block-3 {
+
+    &__small-text {
+      width: 500px;
     }
 
-    .col {
-      .inner {
-        min-height: 437px;
-        max-height: 437px;
-      }
-    }
-
-    .text {
-      margin-left: 30px;
-      margin-top: 100px;
-      padding-bottom: 100px;
-    }
-
-    .right {
-      .small-text {
-        width: 500px;
-      }
-    }
   }
+
   .block_4 {
     .cards {
-      margin-top: 100px;
-      margin-bottom: 100px;
-    }
-
-    .card {
-      margin-bottom: 30px;
-      padding: 0;
-
-      .text {
-        position: static;
-        width: 100%;
-        padding-top: 60px;
+      .card {
+        width: 690px;
         height: 200px;
+
+        &__title {
+          width: 500px;
+        }
+
+        &__text {
+          margin-left: 20px;
+        }
+
+        &__small-text {
+          width: 600px;
+        }
+      }
+    }
+  }
+
+  .block-5 {
+    background: #222222;
+
+    .monitor-text {
+      &_top {
+        margin-bottom: 50px;
+        width: 510px;
       }
 
-      .title {
-        font-size: 30px;
-        line-height: 35px;
-        width: 470px;
-      }
-
-      .small-text {
+      &_bottom {
+        margin-top: 50px;
         width: 600px;
       }
     }
 
-    .row {
-      display: block;
-    }
-  }
-  .block_5 {
-    .block_title {
-      padding-top: 100px;
+    &__block-tittle {
       width: 600px;
     }
 
-    .monitor-text {
-      &.top {
-        margin: 50px auto -20px;
-      }
-
-      &.bottom {
-        margin: -20px auto 50px;
+    .tickers {
+      &__ticker {
+        font-size: 60px;
+        line-height: 70px;
+        letter-spacing: 1.2px;
       }
     }
 
     .icons {
-      .row {
-        flex-wrap: wrap;
-      }
-
-      .description {
-        width: 270px;
-        margin: 0 auto;
+      &__icon-description {
+        width: 275px;
       }
     }
 
-    .ticker {
-      font-size: 50px;
-
-      &:not(:last-child) {
-        margin-bottom: 13px;
-      }
-    }
   }
+
   .block_7 {
-    .content {
-      background-position: 110%, 0, 0, 0, 0, 0;
-      background-size: 400px;
-    }
-  }
-  footer {
-    .title {
-      font-size: 50px;
-      line-height: 60px;
-    }
-  }
-}
 
-@media (max-width: 640px) {
-  .block_title {
-    font-size: 30px;
-    line-height: 40px;
-    letter-spacing: 0.6px;
-  }
-  .block_1 {
-    background-position-y: 20%;
-
-    .nav_item {
-      font-size: 12px;
-      line-height: 16px;
-      width: 290px;
-    }
-
-    nav {
-      .row {
-        width: 340px;
-      }
-
-      &.small-text {
-        width: 340px;
-      }
-    }
-
-    .content {
-      margin-top: 60px;
-
-      .small-text {
-        margin-top: 10px;
-      }
-    }
-
-    .title h1, .title span {
-      font-size: 40px;
-      line-height: 48px;
-      letter-spacing: 0.8px;
-      width: 400px;
-    }
-
-    .astronaut {
-      top: 100px;
-      left: 380px;
-      width: 125px;
-    }
-
-    .small-text {
-      width: 530px;
-      font-size: 12px;
-      line-height: 18px;
-    }
-
-    .logo {
-      padding: 0;
-
-      img {
-        width: 172px;
-      }
-    }
-
-    .ready {
-      display: none;
-    }
-  }
-  .block_3 {
-    .col {
-      .inner {
-        margin-top: 0;
-        padding-top: 50px;
-        min-height: 290px;
-        max-height: 290px;
-      }
-    }
-
-    .right {
-      .small-text {
-        width: 550px;
-      }
-    }
-
-    .left {
-      background-size: 100% 200%;
-    }
-  }
-  .block_4 {
-    .card {
-      .small-text {
-        width: 550px;
-      }
-
-      .text {
-        background-size: 100% 500%;
-      }
-    }
-  }
-  .block_5 {
-    .block_title {
-      width: 350px;
-    }
-
-    .icons {
-      .row {
-        flex-direction: column;
-
-        .col:not(:last-child) .line {
-          margin-bottom: 30px;
-        }
-      }
-
-      .description {
-        width: 450px;
-      }
-    }
-
-    .ticker {
-      font-size: 50px;
-      line-height: 70px;
-    }
-  }
-  .block_7 {
-    .block_title {
-      width: 400px;
-    }
-
-    .form_btn_out, .form_btn_in {
-      width: 260px;
-    }
-
-    .content {
-      background-position: 113%, 0, 0, 0, 0, 0;
-      background-size: 300px;
+    .block-title {
+      width: 600px;
     }
 
     .form-btn {
-      padding-top: 40px;
+      width: 320px;
     }
   }
+
+  .footer {
+
+    &__small-text {
+      width: 500px;
+      font-size: 20px;
+      line-height: 50px;
+    }
+  }
+
 }
 
-@media (max-width: 320px) {
+@media (min-width: 1024px) {
   header {
-    .logo{
-      width: 114px;
+    padding-top: 30px;
+
+    .logo {
+      width: 192px;
+    }
+  }
+  .section {
+    &__row-content, &__col-content {
+      padding-top: 200px;
+      padding-bottom: 200px;
     }
   }
   .block-title {
-    word-break: break-word;
-    font-size: 30px;
-    line-height: 40px;
-    font-family: Russo One;
-    letter-spacing: 1.2px;
+    font-size: 50px;
+    line-height: 60px;
   }
-  .small-text{
-    font-size: 12px;
-    line-height: 18px;
-  }
-  .section {
-    &__row-content {
-      padding-top: 70px;
-      padding-bottom: 70px;
 
-      &_p160 {
-        padding-top: 160px;
-        padding-bottom: 160px;
-      }
-    }
 
-    &__col-content {
-      padding-top: 70px;
-      padding-bottom: 70px;
-    }
-  }
   .block-1 {
-    min-height: 100vh;
-    background-color: #000000;
-    background-repeat: no-repeat;
-    background-size: 110% 110%;
-    &__block-title {
-      width: 150px;
-    }
-    &__ready {
-      display: none;
-    }
-    &__astronaut{
-      width: 125px;
-      left: 155px;
-      top: 185px;
-    }
-    &__small-text{
-      width: 250px;
-    }
-  }
-  .block-2 {
-    background-color: #EEF5F6;
 
     &__block-title {
-      width: 290px;
-    }
-
-    &__left {
-      span {
-        width: 570px;
-      }
-    }
-
-    &__right {
-
-      .text {
-        width: 220px;
-        margin-bottom: 30px;
-      }
-
-    }
-
-  }
-  .block-3 {
-    background-color: #222222;
-    &__right {
+      padding-top: 0;
+      font-size: 80px;
+      line-height: 96px;
+      letter-spacing: 1.4px;
+      width: 1000px;
     }
 
     &__small-text {
-      width: 260px;
+      line-height: 20px;
     }
 
-    &__left {
-      height: 100%;
+    &__astronaut {
+      left: 620px;
+      top: 190px;
     }
+  }
 
-    &__text {
-    }
+  .block-2 {
 
     &__block-title {
+      width: 450px;
+    }
+
+    &__right {
+      .text {
+        width: 350px;
+        margin-bottom: 40px;
+      }
+    }
+  }
+
+  .block-3 {
+
+    &__small-text {
+      width: 350px;
     }
 
   }
+
   .block_4 {
     .cards {
       .card {
-        border: none; // откуда рамка?
-        width: min-content;
-        height: min-content;
-        margin: 0 auto 30px;
+        width: 282px;
+        height: 464px;
+
         &__title {
-          font: 30px/35px Russo One;
-          word-break: break-word;
-          width: 230px;
+          width: 250px;
         }
+
         &__text {
-          width: min-content;
-          height: 355px;
-          padding: 60px 15px 30px;
+          margin-left: 20px;
         }
-        &__small-text{
-          font-size: 14px;
-          line-height: 24px;
-          width: 230px;
+
+        &__small-text {
+          width: 250px;
         }
       }
     }
   }
 
+  .block-5 {
+    background: #222222;
+
+    .monitor-text {
+      &_top {
+        margin-bottom: 60px;
+        width: 510px;
+      }
+
+      &_bottom {
+        margin-top: 60px;
+        width: 600px;
+      }
+    }
+
+    &__block-tittle {
+      margin-bottom: 60px;
+      width: 600px;
+    }
+
+  }
+
+  .block_7 {
+
+    .block-title {
+      width: 600px;
+    }
+
+    .form-btn {
+      width: 354px;
+      height: 68px;
+    }
+  }
+
+  .footer {
+    &__logo {
+      width: 162px;
+    }
+
+    &__small-text {
+      width: 500px;
+      font-size: 20px;
+      line-height: 50px;
+    }
+
+    .section__row-content {
+      padding-top: 140px;
+      padding-bottom: 140px;
+    }
+  }
+
+}
+
+@media (min-width: 1366px) {
+  .block-title {
+    font-size: 60px;
+    line-height: 70px;
+  }
+
+
+  .block-1 {
+
+    &__block-title {
+      font-size: 80px;
+      line-height: 96px;
+      letter-spacing: 1.4px;
+    }
+
+    &__astronaut {
+      left: 790px;
+    }
+  }
+
+  .block-2 {
+
+    &__block-title {
+      width: 550px;
+    }
+
+    &__right {
+      .text {
+        width: 450px;
+      }
+    }
+  }
+
+  .block-3 {
+
+    &__small-text {
+      width: 350px;
+    }
+
+  }
+
+  .block_4 {
+    .cards {
+      .card {
+        width: 282px;
+        height: 464px;
+
+        &__title {
+          width: 250px;
+        }
+
+        &__text {
+          margin-left: 20px;
+        }
+
+        &__small-text {
+          width: 250px;
+        }
+      }
+    }
+  }
+
+  .block-5 {
+    background: #222222;
+
+    .monitor-text {
+      &_top {
+        margin-bottom: 60px;
+        width: 510px;
+      }
+
+      &_bottom {
+        margin-top: 60px;
+        width: 600px;
+      }
+    }
+
+    &__block-tittle {
+      margin-bottom: 60px;
+      width: 600px;
+    }
+
+  }
+
+  .block_7 {
+
+    .block-title {
+      width: 600px;
+    }
+
+    .form-btn {
+      width: 354px;
+      height: 68px;
+    }
+  }
+
+  .footer {
+    &__logo {
+      width: 162px;
+    }
+
+    &__small-text {
+      width: 500px;
+      font-size: 20px;
+      line-height: 50px;
+    }
+
+    .section__row-content {
+      padding-top: 140px;
+      padding-bottom: 140px;
+    }
+  }
 }
