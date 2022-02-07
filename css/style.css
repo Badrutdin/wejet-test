@@ -416,6 +416,7 @@ header .nav_item:hover, header .nav_item:focus {
 
 body {
   position: relative;
+  overflow-x: hidden;
 }
 
 .footer {
