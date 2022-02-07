@@ -1190,3 +1190,8 @@ form svg {
     padding-bottom: 140px;
   }
 }
+@media (min-width: 1920px) {
+  .block-1__astronaut {
+    left: 1060px;
+  }
+}

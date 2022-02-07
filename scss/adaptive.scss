@@ -525,3 +525,11 @@
     }
   }
 }
+@media (min-width: 1920px) {
+  .block-1 {
+
+    &__astronaut {
+      left: 1060px;
+    }
+  }
+}
