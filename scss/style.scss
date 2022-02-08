@@ -301,6 +301,8 @@ form {
       margin: 0 auto 30px;
       border: none; // откуда рамка?
       width: 100%;
+      height: auto;
+      overflow: hidden;
       min-height: 355px;
       color: rgba(255, 255, 255, .7);
       background-color: #EEF5F6;
