@@ -1,0 +1,25 @@
+
+.container {
+  max-width: calc(320px + 12px - (32px - 12px) * 2);
+}
+
+@media (min-width: 640px)  {
+  .container {
+    max-width: calc(640px + 12px - (32px - 12px) * 2);
+  }
+}
+@media (min-width: 768px)  {
+  .container {
+    max-width: calc(768px + 12px - (39px - 12px) * 2);
+  }
+}
+@media (min-width: 1024px)  {
+  .container {
+    max-width: calc(1024px + 12px - (59px - 12px) * 2);
+  }
+}
+@media (min-width: 1366px)  {
+  .container {
+    max-width: calc(1366px + 12px - (122px - 12px) * 2);
+  }
+}

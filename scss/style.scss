@@ -16,9 +16,10 @@ TODO
     Сделать секции страницы одним css-классом с модификатороми
     Начинай разделять scss на маленькие файлы, включаемые в большой - полезно для масштабирования проекта
 */
+@import "../node_modules/bootstrap/scss/bootstrap";
 @import "fonts";
 @import "normalize";
-
+@import "container";
 
 .form {
   position: absolute;
@@ -50,9 +51,11 @@ header {
     padding: 15px 0 0 0;
     list-style: none;
     display: flex;
-    justify-content: space-between;
-
+    justify-content: flex-end;
     li {
+      &:not(:first-child){
+        padding-left: 17px;
+    }
       display: inline-block;
     }
   }
@@ -130,7 +133,7 @@ form {
 
   .block-title {
     color: white;
-    width: 400px;
+    //width: 400px;
   }
 
 
@@ -160,6 +163,7 @@ form {
   letter-spacing: 1.2px;
 
   &__subtitle {
+    display: inline-block;
     color: #00CAE5;
     max-width: 100%;
   }
@@ -188,7 +192,7 @@ form {
     line-height: 48px;
     letter-spacing: 0.8px;
     margin: 0 auto;
-    width: 200px;
+    //width: 200px;
   }
 
   &__astronaut {
@@ -207,7 +211,7 @@ form {
   &__small-text {
     font-size: 12px;
     line-height: 18px;
-    width: 250px;
+    //width: 250px;
     margin: 30px auto 0;
   }
 
@@ -232,7 +236,7 @@ form {
   }
 
   &__block-title {
-    width: 280px;
+    //width: 280px;
   }
 
   &__left {
@@ -248,7 +252,7 @@ form {
     position: relative;
 
     .text {
-      width: 250px;
+      //width: 250px;
       margin-bottom: 30px;
     }
 
@@ -266,7 +270,7 @@ form {
   }
 
   &__small-text {
-    width: 260px;
+    //width: 260px;
   }
 
   &__left {
@@ -292,10 +296,12 @@ form {
 
   .cards {
     .card {
+      position: relative;
+      padding: 0 15px;
       margin: 0 auto 30px;
       border: none; // откуда рамка?
-      width: 258px;
-      height: 355px;
+      width: 100%;
+      min-height: 355px;
       color: rgba(255, 255, 255, .7);
       background-color: #EEF5F6;
       background-position: 0, 0, 0, 100px, 0, 0;
@@ -318,18 +324,20 @@ form {
       &__title {
         font: 30px/35px Russo One;
         word-break: break-word;
-        width: 230px;
+        //width: 230px;
         margin-bottom: 20px;
       }
 
       &__text {
         letter-spacing: 0.6px;
-        margin: auto auto auto 15px;
+        max-width: 100%;
+        position: absolute;
+        bottom: 55px;
       }
 
       &__small-text {
-        color: #4A5454;
-        width: 230px;
+        color: rgba(255,255,255, .3);
+        //width: 230px;
       }
     }
   }
@@ -341,19 +349,19 @@ form {
   .monitor-text {
     &_top {
       margin: 0 auto 25px;
-      width: 250px;
+      //width: 250px;
 
     }
 
     &_bottom {
       margin: 25px auto 0;
-      width: 250px;
+      //width: 250px;
 
     }
   }
 
   &__block-tittle {
-    width: 200px;
+    //width: 200px;
     margin: 0 auto 25px;
   }
 
@@ -407,7 +415,7 @@ form {
     }
 
     &__icon-description {
-      width: 260px;
+      //width: 260px;
       margin: 0 auto;
     }
   }
@@ -471,7 +479,7 @@ form {
   }
 
   .block-title {
-    width: 180px;
+    //width: 180px;
     margin-bottom: 30px;
   }
 
@@ -515,7 +523,7 @@ form {
 
   &__small-text {
     color: #FFFFFF;
-    width: 173px;
+    //width: 173px;
     margin: 0 auto;
   }
 
@@ -544,4 +552,10 @@ form {
 
 @import "adaptive";
 
-
+$grid-breakpoints: (
+        xs: 0,
+        sm: 640px,
+        md: 768px,
+        lg: 992px,
+        xl: 1230px
+);

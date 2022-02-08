@@ -1,14 +1,3 @@
-@media (min-width: 320px) and (max-width: 768px) {
-  .container {
-    max-width: 100%;
-  }
-  .row {
-    margin: 0 auto;
-  }
-  .block-3__left {
-    margin: -4%;
-  }
-}
 
 @media (min-width: 640px) {
   header {
@@ -22,13 +11,18 @@
     .menu-top {
       padding: 0;
       margin: 0;
+      li {
+        &:not(:first-child){
+          padding-left: 25px;
+        }
+      }
     }
   }
 
   .block-1 {
 
     &__block-title {
-      width: 400px;
+      //width: 400px;
     }
 
     &__astronaut {
@@ -44,12 +38,12 @@
   .block-2 {
 
     &__block-title {
-      width: 570px;
+      //width: 570px;
     }
 
     &__right {
       .text {
-        width: 570px;
+        //width: 570px;
       }
     }
   }
@@ -57,7 +51,7 @@
   .block-3 {
 
     &__small-text {
-      width: 600px;
+      //width: 600px;
     }
 
   }
@@ -65,15 +59,17 @@
   .block_4 {
     .cards {
       .card {
-        width: 576px;
-        height: 200px;
+        min-height: 200px;
 
         &__title {
-          width: 600px;
+          //width: 600px;
         }
 
         &__small-text {
-          width: 550px;
+          //width: 550px;
+        }
+        &__text{
+          bottom: 30px;
         }
       }
     }
@@ -84,16 +80,16 @@
 
     .monitor-text {
       &_top {
-        width: 510px;
+        //width: 510px;
       }
 
       &_bottom {
-        width: 600px;
+        //width: 600px;
       }
     }
 
     &__block-tittle {
-      width: 400px;
+      //width: 400px;
     }
 
     .tickers {
@@ -107,7 +103,7 @@
     .icons {
 
       &__icon-description {
-        width: 470px;
+        //width: 470px;
       }
     }
 
@@ -116,7 +112,7 @@
   .block_7 {
 
     .block-title {
-      width: 400px;
+      //width: 400px;
     }
 
     .form-btn {
@@ -127,7 +123,7 @@
   .footer {
 
     &__small-text {
-      width: 300px;
+      //width: 300px;
     }
   }
 
@@ -137,7 +133,13 @@
 @media (min-width: 768px) {
   header {
     padding-top: 30px;
-
+    .menu-top {
+      li {
+        &:not(:first-child){
+          padding-left: 45px;
+        }
+      }
+    }
     .logo {
       width: 192px;
     }
@@ -166,7 +168,7 @@
       font-size: 70px;
       line-height: 85px;
       letter-spacing: 1.4px;
-      width: 700px;
+      //width: 700px;
     }
 
     &__astronaut {
@@ -180,12 +182,12 @@
   .block-2 {
 
     &__block-title {
-      width: 450px;
+      //width: 450px;
     }
 
     &__right {
       .text {
-        width: 450px;
+        //width: 450px;
       }
     }
   }
@@ -193,7 +195,7 @@
   .block-3 {
 
     &__small-text {
-      width: 500px;
+      //width: 500px;
     }
 
   }
@@ -201,19 +203,17 @@
   .block_4 {
     .cards {
       .card {
-        width: 690px;
-        height: 200px;
+        min-height: 200px;
 
         &__title {
-          width: 500px;
+          //width: 500px;
         }
 
         &__text {
-          margin-left: 20px;
         }
 
         &__small-text {
-          width: 600px;
+          //width: 600px;
         }
       }
     }
@@ -225,17 +225,17 @@
     .monitor-text {
       &_top {
         margin-bottom: 50px;
-        width: 510px;
+        //width: 510px;
       }
 
       &_bottom {
         margin-top: 50px;
-        width: 600px;
+        //width: 600px;
       }
     }
 
     &__block-tittle {
-      width: 600px;
+      //width: 600px;
     }
 
     .tickers {
@@ -248,7 +248,7 @@
 
     .icons {
       &__icon-description {
-        width: 275px;
+        //width: 275px;
       }
     }
 
@@ -257,7 +257,7 @@
   .block_7 {
 
     .block-title {
-      width: 600px;
+      //width: 600px;
     }
 
     .form-btn {
@@ -268,7 +268,7 @@
   .footer {
 
     &__small-text {
-      width: 500px;
+      //width: 500px;
       font-size: 20px;
       line-height: 50px;
     }
@@ -303,7 +303,7 @@
       font-size: 80px;
       line-height: 96px;
       letter-spacing: 1.4px;
-      width: 1000px;
+      //width: 1000px;
     }
 
     &__small-text {
@@ -319,12 +319,12 @@
   .block-2 {
 
     &__block-title {
-      width: 450px;
+      //width: 450px;
     }
 
     &__right {
       .text {
-        width: 350px;
+        //width: 350px;
         margin-bottom: 40px;
       }
     }
@@ -333,7 +333,7 @@
   .block-3 {
 
     &__small-text {
-      width: 350px;
+      //width: 350px;
     }
 
   }
@@ -341,19 +341,18 @@
   .block_4 {
     .cards {
       .card {
-        width: 282px;
-        height: 464px;
+        min-height: 464px;
 
         &__title {
-          width: 250px;
+          //width: 250px;
         }
 
         &__text {
-          margin-left: 20px;
+          bottom: 70px;
         }
 
         &__small-text {
-          width: 250px;
+          //width: 250px;
         }
       }
     }
@@ -365,18 +364,18 @@
     .monitor-text {
       &_top {
         margin-bottom: 60px;
-        width: 510px;
+        //width: 510px;
       }
 
       &_bottom {
         margin-top: 60px;
-        width: 600px;
+        //width: 600px;
       }
     }
 
     &__block-tittle {
       margin-bottom: 60px;
-      width: 600px;
+      //width: 600px;
     }
 
   }
@@ -384,7 +383,7 @@
   .block_7 {
 
     .block-title {
-      width: 600px;
+      //width: 600px;
     }
 
     .form-btn {
@@ -399,7 +398,7 @@
     }
 
     &__small-text {
-      width: 500px;
+      //width: 500px;
       font-size: 20px;
       line-height: 50px;
     }
@@ -425,6 +424,7 @@
       font-size: 80px;
       line-height: 96px;
       letter-spacing: 1.4px;
+      //width: 1000px;
     }
 
     &__astronaut {
@@ -432,43 +432,13 @@
     }
   }
 
-  .block-2 {
-
-    &__block-title {
-      width: 550px;
-    }
-
-    &__right {
-      .text {
-        width: 450px;
-      }
-    }
-  }
-
-  .block-3 {
-
-    &__small-text {
-      width: 350px;
-    }
-
-  }
-
   .block_4 {
     .cards {
       .card {
-        width: 282px;
-        height: 464px;
-
-        &__title {
-          width: 250px;
-        }
+        min-height: 464px;
 
         &__text {
-          margin-left: 20px;
-        }
-
-        &__small-text {
-          width: 250px;
+          bottom: 70px;
         }
       }
     }
@@ -480,18 +450,15 @@
     .monitor-text {
       &_top {
         margin-bottom: 60px;
-        width: 510px;
       }
 
       &_bottom {
         margin-top: 60px;
-        width: 600px;
       }
     }
 
     &__block-tittle {
       margin-bottom: 60px;
-      width: 700px;
     }
 
   }
@@ -499,7 +466,6 @@
   .block_7 {
 
     .block-title {
-      width: 600px;
     }
 
     .form-btn {
@@ -514,7 +480,6 @@
     }
 
     &__small-text {
-      width: 500px;
       font-size: 20px;
       line-height: 50px;
     }
