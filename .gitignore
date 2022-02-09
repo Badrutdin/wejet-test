@@ -1,3 +1,5 @@
 .xd
 .docx\
 .idea
+node_modules
+*dist*
