@@ -11,6 +11,8 @@
     .menu-top {
       padding: 0;
       margin: 0;
+      justify-content: flex-end;
+
       li {
         &:not(:first-child){
           padding-left: 25px;
