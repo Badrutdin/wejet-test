@@ -1,7 +1,6 @@
-
 @media (min-width: 640px) {
   header {
-    padding-top: 15px;
+    padding: 20px 20px;
 
     .logo {
       margin: 0;
@@ -14,7 +13,7 @@
       justify-content: flex-end;
 
       li {
-        &:not(:first-child){
+        &:not(:first-child) {
           padding-left: 25px;
         }
       }
@@ -22,10 +21,7 @@
   }
 
   .block-1 {
-
-    &__block-title {
-      //width: 400px;
-    }
+    padding-top: 50px;
 
     &__astronaut {
       left: 375px;
@@ -37,40 +33,12 @@
     }
   }
 
-  .block-2 {
-
-    &__block-title {
-      //width: 570px;
-    }
-
-    &__right {
-      .text {
-        //width: 570px;
-      }
-    }
-  }
-
-  .block-3 {
-
-    &__small-text {
-      //width: 600px;
-    }
-
-  }
-
   .block_4 {
     .cards {
       .card {
         min-height: 200px;
 
-        &__title {
-          //width: 600px;
-        }
-
-        &__small-text {
-          //width: 550px;
-        }
-        &__text{
+        &__text {
           bottom: 30px;
         }
       }
@@ -80,20 +48,6 @@
   .block-5 {
     background: #222222;
 
-    .monitor-text {
-      &_top {
-        //width: 510px;
-      }
-
-      &_bottom {
-        //width: 600px;
-      }
-    }
-
-    &__block-tittle {
-      //width: 400px;
-    }
-
     .tickers {
       &__ticker {
         font-size: 50px;
@@ -102,30 +56,11 @@
       }
     }
 
-    .icons {
-
-      &__icon-description {
-        //width: 470px;
-      }
-    }
-
   }
 
   .block_7 {
-
-    .block-title {
-      //width: 400px;
-    }
-
     .form-btn {
       width: 263px;
-    }
-  }
-
-  .footer {
-
-    &__small-text {
-      //width: 300px;
     }
   }
 
@@ -134,14 +69,16 @@
 
 @media (min-width: 768px) {
   header {
-    padding-top: 30px;
+    padding: 30px 30px;
+
     .menu-top {
       li {
-        &:not(:first-child){
+        &:not(:first-child) {
           padding-left: 45px;
         }
       }
     }
+
     .logo {
       width: 192px;
     }
@@ -160,17 +97,18 @@
   .block-title {
     font-size: 50px;
     line-height: 60px;
+    margin-bottom: 50px;
   }
 
 
   .block-1 {
+    padding-top: 70px;
 
     &__block-title {
       padding-top: 200px;
       font-size: 70px;
       line-height: 85px;
       letter-spacing: 1.4px;
-      //width: 700px;
     }
 
     &__astronaut {
@@ -181,42 +119,10 @@
 
   }
 
-  .block-2 {
-
-    &__block-title {
-      //width: 450px;
-    }
-
-    &__right {
-      .text {
-        //width: 450px;
-      }
-    }
-  }
-
-  .block-3 {
-
-    &__small-text {
-      //width: 500px;
-    }
-
-  }
-
   .block_4 {
     .cards {
       .card {
         min-height: 200px;
-
-        &__title {
-          //width: 500px;
-        }
-
-        &__text {
-        }
-
-        &__small-text {
-          //width: 600px;
-        }
       }
     }
   }
@@ -227,17 +133,11 @@
     .monitor-text {
       &_top {
         margin-bottom: 50px;
-        //width: 510px;
       }
 
       &_bottom {
         margin-top: 50px;
-        //width: 600px;
       }
-    }
-
-    &__block-tittle {
-      //width: 600px;
     }
 
     .tickers {
@@ -248,19 +148,9 @@
       }
     }
 
-    .icons {
-      &__icon-description {
-        //width: 275px;
-      }
-    }
-
   }
 
   .block_7 {
-
-    .block-title {
-      //width: 600px;
-    }
 
     .form-btn {
       width: 320px;
@@ -270,7 +160,6 @@
   .footer {
 
     &__small-text {
-      //width: 500px;
       font-size: 20px;
       line-height: 50px;
     }
@@ -280,7 +169,6 @@
 
 @media (min-width: 1024px) {
   header {
-    padding-top: 30px;
 
     .logo {
       width: 192px;
@@ -305,7 +193,6 @@
       font-size: 80px;
       line-height: 96px;
       letter-spacing: 1.4px;
-      //width: 1000px;
     }
 
     &__small-text {
@@ -320,24 +207,11 @@
 
   .block-2 {
 
-    &__block-title {
-      //width: 450px;
-    }
-
     &__right {
       .text {
-        //width: 350px;
         margin-bottom: 40px;
       }
     }
-  }
-
-  .block-3 {
-
-    &__small-text {
-      //width: 350px;
-    }
-
   }
 
   .block_4 {
@@ -345,16 +219,8 @@
       .card {
         min-height: 464px;
 
-        &__title {
-          //width: 250px;
-        }
-
         &__text {
           bottom: 70px;
-        }
-
-        &__small-text {
-          //width: 250px;
         }
       }
     }
@@ -366,27 +232,16 @@
     .monitor-text {
       &_top {
         margin-bottom: 60px;
-        //width: 510px;
       }
 
       &_bottom {
         margin-top: 60px;
-        //width: 600px;
       }
-    }
-
-    &__block-tittle {
-      margin-bottom: 60px;
-      //width: 600px;
     }
 
   }
 
   .block_7 {
-
-    .block-title {
-      //width: 600px;
-    }
 
     .form-btn {
       width: 354px;
@@ -400,7 +255,6 @@
     }
 
     &__small-text {
-      //width: 500px;
       font-size: 20px;
       line-height: 50px;
     }
@@ -426,7 +280,6 @@
       font-size: 80px;
       line-height: 96px;
       letter-spacing: 1.4px;
-      //width: 1000px;
     }
 
     &__astronaut {
@@ -447,7 +300,6 @@
   }
 
   .block-5 {
-    background: #222222;
 
     .monitor-text {
       &_top {
@@ -459,17 +311,9 @@
       }
     }
 
-    &__block-tittle {
-      margin-bottom: 60px;
-    }
-
   }
 
   .block_7 {
-
-    .block-title {
-    }
-
     .form-btn {
       width: 354px;
       height: 68px;
@@ -495,7 +339,6 @@
 
 @media (min-width: 1920px) {
   .block-1 {
-
     &__astronaut {
       left: 1060px;
     }

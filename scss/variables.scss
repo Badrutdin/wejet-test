@@ -6,6 +6,13 @@ $grid-breakpoints: (
         xl: 1366px,
         xxl: 1920px
 ) !default;
+
 $font-primary: 'Montserrat', sans-serif;
 $font-secondary: 'Russo One', sans-serif;
-@import "../node_modules/bootstrap/scss/bootstrap";
+
+$color-primary: #222;
+$color-secondary: #00CAE5;
+$color-tertiary: #A3B9C2;
+
+$transition_speed: .2s;
+
