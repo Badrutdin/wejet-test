@@ -1,0 +1,167 @@
+
+body {
+	position: relative;
+	overflow-x: hidden;
+	font-family: $font-primary;
+	font-size: 14px;
+	color: $color-text;
+}
+
+.block-1 {
+	min-height: 100vh;
+	padding-top: 100px;
+	background-color: #000000;
+	background-repeat: no-repeat;
+	background-size: 110% 110%;
+	position: relative;
+
+	&__block-title {
+		font-size: 40px;
+		line-height: 48px;
+		letter-spacing: 0.8px;
+		margin: 0 auto;
+	}
+
+	&__astronaut {
+		position: absolute;
+		width: 125px;
+		left: 165px;
+		top: 175px;
+		z-index: 1;
+
+		img {
+			width: 100%;
+			z-index: 2;
+		}
+	}
+
+	&__description {
+		font-size: 12px;
+		line-height: 18px;
+		margin: 0 auto;
+	}
+
+	&__ready {
+		display: none;
+		text-decoration: none;
+		color: #FFFFFF;
+
+		svg {
+			transition: transform $transition_speed ease-out;
+			display: block;
+			margin: 10px auto;
+		}
+
+		&:hover {
+			& svg {
+				transform: translateY(10px);
+			}
+		}
+	}
+}
+
+.block-2 {
+	background-color: #EEF5F6;
+
+	.open_form {
+		text-decoration: none;
+		color: $color-secondary;
+
+		svg {
+			transition: transform $transition_speed ease-out;
+		}
+
+		&:hover {
+			& svg {
+				transform: translateX(10px);
+			}
+		}
+	}
+
+	&__left {
+		.block-title__subtitle {
+			display: block;
+		}
+	}
+
+	&__right {
+		position: relative;
+
+		.text {
+			margin-bottom: 30px;
+		}
+	}
+
+	&__small-text {
+		color: #222222;
+	}
+}
+
+.block-3 {
+	background-color: #222222;
+
+	&__left {
+		padding: 0;
+		background-color: #4A2B39;
+		background-image: url('../../images/nasa-rTZW4f02zY8-unsplash-resize.jpg');
+		background-size: cover;
+		background-position: 0, 0, 0, 100px, 0, 0;
+		background-repeat: no-repeat;
+	}
+
+}
+
+.block_4 {
+	background: linear-gradient(160deg, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0) 50%, rgba(238, 245, 246, 1) 50%);
+}
+
+.block-5 {
+	background: #222222;
+
+	.monitor-text {
+		&_top {
+			margin: 0 auto 25px;
+		}
+
+		&_bottom {
+			margin: 25px auto 0;
+		}
+	}
+
+	&__block-title {
+		margin: 0 auto;
+	}
+
+	.tickers {
+		&__ticker {
+			font: 30px/70px $font-secondary;
+			letter-spacing: 0.6px;
+			color: #555555;
+			width: 300%;
+
+			span {
+				color: $color-secondary;
+			}
+
+			&:not(:last-child) {
+				margin-bottom: 20px;
+			}
+		}
+	}
+
+	.icons {
+		padding-top: 200px;
+	}
+
+}
+
+.block_7 {
+	background-color: #222222;
+	background-image: url('../../images/nasa-pd4lo70LdbI-unsplash-resize.png');
+	background-size: contain;
+	background-position-x: 100%;
+	background-position-y: 50%;
+	background-repeat: no-repeat;
+}
+
+

@@ -1,0 +1,38 @@
+.icon {
+	transition: color $transition_speed ease-out;
+
+	&__title {
+		font: 30px/40px $font-secondary;
+		letter-spacing: 0.6px;
+		margin-bottom: 20px;
+		margin-top: 30px;
+	}
+
+	&__line {
+		opacity: 0;
+		width: 50%;
+		border: 1px solid #FFFFFF;
+		margin-left: 25%;
+		margin-top: 40px;
+	}
+
+	&__description {
+		margin: 0 auto;
+	}
+
+	&:hover, &:focus {
+		color: #ffffff;
+		cursor: pointer;
+
+		&__line {
+			opacity: 1;
+		}
+
+		&__description {
+			color: #ffffff;
+		}
+	}
+
+}
+
+

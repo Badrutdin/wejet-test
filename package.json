@@ -1,0 +1,38 @@
+{
+  "name": "basic_template",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Evgeni Egorov, WeJet",
+  "license": "ISC",
+  "devDependencies": {
+    "ansi-colors": "^4.1.1",
+    "autoprefixer": "^10.4.2",
+    "browser-sync": "^2.27.7",
+    "del": "^6.0.0",
+    "fancy-log": "^2.0.0",
+    "gulp": "^4.0.2",
+    "gulp-changed": "^4.0.3",
+    "gulp-if": "^3.0.0",
+    "gulp-notify": "^4.0.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-postcss": "^9.0.1",
+    "gulp-prettify": "^0.5.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-svgmin": "^3.0.0",
+    "gulp-svgstore": "^9.0.0",
+    "minimist": "^1.2.5",
+    "postcss": "^8.4.6",
+    "postcss-csso": "^6.0.0",
+    "postcss-sort-media-queries": "^4.2.1",
+    "require-dir": "^1.2.0",
+    "sass": "^1.49.7"
+  },
+  "dependencies": {
+    "bootstrap": "^5.1.3"
+  }
+}

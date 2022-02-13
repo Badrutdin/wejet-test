@@ -1,0 +1,54 @@
+.block-title {
+	font-size: 30px;
+	line-height: 40px;
+	font-family: $font-secondary;
+	letter-spacing: 1.2px;
+	margin-bottom: 30px;
+
+	&__subtitle {
+		display: inline-block;
+		color: $color-secondary;
+		max-width: 100%;
+	}
+
+	&_light {
+		color: #FFFFFF;
+	}
+
+	&_dark {
+		color: black;
+	}
+}
+
+.small-text {
+	letter-spacing: 0px;
+	font-family: $font-primary;
+	font-size: 14px;
+	line-height: 24px;
+}
+
+.text, .block-title, .small-text {
+	max-width: 100%;
+}
+
+@media (min-width: $bp-md) {
+	.block-title {
+		font-size: 50px;
+		line-height: 60px;
+		margin-bottom: 50px;
+	}
+}
+
+@media (min-width: $bp-lg) {
+	.block-title {
+		font-size: 50px;
+		line-height: 60px;
+	}
+}
+
+@media (min-width: $bp-xl) {
+	.block-title {
+		font-size: 60px;
+		line-height: 70px;
+	}
+}

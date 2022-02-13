@@ -1,0 +1,57 @@
+.open-form-btn {
+	position: relative;
+	font: 16px/50px $font-primary;
+	color: #FFFFFF;
+	border: 1px solid #FFFFFF;
+	width: 247px;
+	height: 68px;
+	transition: transform $transition_speed ease-out;
+
+	&::before {
+		transition: transform $transition_speed ease-out;
+		content: '';
+		position: absolute;
+		border-right: 1px solid #FFFFFF;
+		border-bottom: 1px solid #FFFFFF;
+		height: 100%;
+		width: 100%;
+		left: 15px;
+		top: 10px;
+	}
+
+	&:hover {
+		transform: translate(10px, 5px);
+		background-color: #FFFFFF;
+		color: black;
+
+		&:before {
+			transform: translate(-10px, -5px);
+		}
+	}
+}
+
+@media (min-width: $bp-sm) {
+	.open-form-btn {
+		width: 263px;
+	}
+}
+
+@media (min-width: $bp-md) {
+	.open-form-btn {
+		width: 320px;
+	}
+}
+
+@media (min-width: $bp-lg) {
+	.open-form-btn {
+		width: 354px;
+		height: 68px;
+	}
+}
+
+@media (min-width: $bp-xl) {
+	.open-form-btn {
+		width: 354px;
+		height: 68px;
+	}
+}

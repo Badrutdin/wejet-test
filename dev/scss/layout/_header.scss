@@ -1,0 +1,50 @@
+header {
+	padding-top: 20px;
+	position: fixed;
+	width: 100%;
+	box-shadow: 0 0px 20px 10px #000;
+	z-index: 999;
+	backdrop-filter: blur(5px);
+	background-color: rgba(0, 0, 0, .8);
+
+	.logo {
+		width: 114px;
+		margin: 0 auto;
+
+		img {
+			width: 100%;
+		}
+	}
+
+}
+
+@media (min-width: $bp-sm) {
+	header {
+		padding: 20px 20px;
+
+		.logo {
+			margin: 0;
+			width: 172px;
+		}
+
+	}
+}
+
+@media (min-width: $bp-md) {
+	header {
+		padding: 30px 30px;
+
+		.logo {
+			width: 192px;
+		}
+	}
+}
+
+@media (min-width: $bp-lg) {
+	header {
+
+		.logo {
+			width: 192px;
+		}
+	}
+}

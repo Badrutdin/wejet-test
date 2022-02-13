@@ -1,0 +1,86 @@
+@import "../helpers/variables";
+
+.card {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	padding: 30px 15px;
+	margin: 0 auto 30px;
+	border: none;
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+	min-height: 355px;
+	color: rgba(255, 255, 255, .7);
+	background-color: #EEF5F6;
+	background-position: 0, 0, 0, 100px, 0, 0;
+	background-repeat: no-repeat;
+	background-size: cover;
+	transition: $transition_speed ease-out;
+
+
+
+	&__title {
+		font: 30px/35px $font-secondary;
+		word-break: break-word;
+		margin-bottom: 20px;
+	}
+
+	&__text {
+		letter-spacing: 0.6px;
+		max-width: 100%;
+	}
+
+	&__small-text {
+		color: rgba(255, 255, 255, .3);
+	}
+
+	&:hover, &:focus {
+		transform: translateY(-20px);
+		box-shadow: 10px 10px 30px 1px rgb(0 77 88 / 44%);
+		color: rgba(255, 255, 255, 1);
+		cursor: pointer;
+
+		&__small-text {
+			transition: $transition_speed ease-out;
+			color: rgba(255, 255, 255, 1);
+		}
+	}
+
+}
+@media (min-width: $bp-sm) {
+	.card {
+		min-height: 200px;
+
+		&__text {
+			bottom: 30px;
+		}
+	}
+}
+
+@media (min-width: $bp-md) {
+	.card {
+		min-height: 200px;
+	}
+}
+
+@media (min-width: $bp-lg) {
+	.card {
+		min-height: 464px;
+
+		&__text {
+			bottom: 70px;
+		}
+	}
+}
+
+@media (min-width: $bp-xl) {
+	.card {
+		min-height: 464px;
+
+		&__text {
+			bottom: 70px;
+		}
+	}
+}
