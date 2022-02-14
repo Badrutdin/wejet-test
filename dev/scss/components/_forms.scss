@@ -1,0 +1,28 @@
+.feedback {
+	position: relative;
+	padding: 100px;
+	background: #222222;
+	color: #FFFFFF;
+	max-width: 80%;
+	margin: 0 auto;
+
+	&__input {
+		background: #000;
+		border: none;
+		border-bottom: 2px solid #FFFFFF;
+		padding: 10px;
+		width: 700px;
+		color: #FFFFFF;
+		font: normal normal normal 30px/50px $font-primary;
+	}
+
+	&::placeholder {
+		color: #FFFFFF;
+		font: normal normal normal 30px/50px $font-primary;
+	}
+
+	.block-title {
+		color: #FFFFFF;
+	}
+
+}
