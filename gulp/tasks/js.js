@@ -3,6 +3,7 @@ const sourcemaps = require('gulp-sourcemaps');
 const plumber = require('gulp-plumber');
 const gulpIf = require('gulp-if');
 const babel = require('gulp-babel');
+const uglify = require('gulp-uglify');
 const { server } = require('./server');
 const config = require('../config');
 
@@ -14,6 +15,7 @@ function jsCore () {
     }))
     .pipe(babel())
     .pipe(gulpIf(!config.production, sourcemaps.write('./')))
+    .pipe(gulpIf(config.production, uglify()))
     .pipe(dest(config.dest.js))
     .pipe(server.reload({stream: true}));
 }
@@ -25,6 +27,7 @@ function jsVendor () {
     .pipe(plumber({
       errorHandler: config.errorHandler
     }))
+    .pipe(gulpIf(config.production, uglify()))
     .pipe(dest(config.dest.js))
     .pipe(server.reload({stream: true}));
 }
