@@ -1,5 +1,6 @@
 const { src, dest, series } = require('gulp');
 const plumber = require('gulp-plumber');
+const babel = require('gulp-babel');
 const { server } = require('./server');
 const config = require('../config');
 
@@ -8,6 +9,7 @@ function jsCore () {
     .pipe(plumber({
       errorHandler: config.errorHandler
     }))
+    .pipe(babel())
     .pipe(dest(config.dest.js))
     .pipe(server.reload({stream: true}));
 }
