@@ -19,3 +19,7 @@ exports.images = tasks.assets.images;
 exports.svg = tasks.assets.svg;
 exports.favicons = tasks.assets.favicons;
 exports.assets = tasks.assets.assets;
+// js
+exports.jsCore = tasks.js.jsCore;
+exports.jsVendor = tasks.js.jsVendor;
+exports.js = tasks.js.js;
