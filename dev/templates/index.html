@@ -2,14 +2,15 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" name="viewport">
+	<meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+		  name="viewport">
 	<meta content="ie=edge" http-equiv="X-UA-Compatible">
+	<link href="css/magnific-popup.css" rel="stylesheet">
 	<link href="styles.css" rel="stylesheet">
 	<link href="template_styles.css" rel="stylesheet">
-	<link href="css/magnific-popup.css" rel="stylesheet">
-	<link rel="preload" href="../fonts/Montserrat-Medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+	<link as="font" crossorigin="anonymous" href="../fonts/Montserrat-Medium.woff2" rel="preload" type="font/woff2">
 
-	<link rel="preload" href="../fonts/RussoOne-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+	<link as="font" crossorigin="anonymous" href="../fonts/RussoOne-Regular.woff2" rel="preload" type="font/woff2">
 
 
 	<title>Document</title>
@@ -18,49 +19,59 @@
 	<script src="js/jquery.magnific-popup.js"></script>
 </head>
 <body>
-<form class="feedback mfp-hide" id="feedback" action="">
-	<div class="container">
-		<div class="row">
-			<div class="col">
-				<div class="block-title">Это что? <span>Это колбэк</span></div>
+<div class="wj-modal feedback mfp-hide" id="feedback">
+	<form action="">
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<div class="block-title"><span class="block-title__subtitle">Это что?</span> Это колбэк</div>
+				</div>
+			</div>
+			<div class="form-fields row">
+				<div class="form-fields__field col-12">
+					<div class="animated-input">
+						<label class="animated-input__label" for="feedback-name">Представьтесь</label>
+						<input class="feedback-input  animated-input__input" id="feedback-name" type="text">
+					</div>
+				</div>
+				<div class="form-fields__field col-12">
+					<div class="animated-input">
+						<label class="animated-input__label" for="feedback-number">Ваш номер телефона</label>
+						<input class="feedback-input animated-input__input" id="feedback-number" type="tel">
+					</div>
+				</div>
+				<div class="form-fields__field col-12">
+					<a class="btn">
+						<span>Перезвоните мне</span>
+					</a>
+				</div>
 			</div>
 		</div>
-		<div class="row">
-			<div class="col">
-				<input class="feedback__input" id="name" placeholder="Иванов Иван Иванович" type="text"><br/>
-				<input class="feedback__input" id="number" placeholder="+7(XXX) XXX XX XX" type="tel"><br/>
-			</div>
-		</div>
-	</div>
-	<div class="form-btn">
-		<div class="form_btn_out">
-			<div class="form_btn_in">
-				<span>Перезвоните мне</span>
-			</div>
-		</div>
-	</div>
-</form>
+
+	</form>
+</div>
+
 <header>
 	<div class="container">
 		<div class="row align-items-sm-end justify-content-xxl-between">
 			<div class="col-12 col-sm-4  col-lg-3">
-				<a class="logo" href="#" data-scroll>
+				<a class="logo" data-scroll href="#">
 					<img alt="Logo" src="images/WeJet-logo.png">
 				</a>
 			</div>
 			<nav class="col-12 col-sm-8  col-lg-9 small-text">
 				<ul class="menu-top">
 					<li>
-						<a class="menu-top__item" href="#block-2" data-scroll> Текст </a>
+						<a class="menu-top__item" data-scroll href="#block-2"> Текст </a>
 					</li>
 					<li>
-						<a class="menu-top__item" href="#block_4" data-scroll> Карточки </a>
+						<a class="menu-top__item" data-scroll href="#block_4"> Карточки </a>
 					</li>
 					<li>
-						<a class="menu-top__item" href="#block-5" data-scroll> Скролл </a>
+						<a class="menu-top__item" data-scroll href="#block-5"> Скролл </a>
 					</li>
 					<li>
-						<a class="menu-top__item" href="#block_6" data-scroll> Слайдер </a>
+						<a class="menu-top__item" data-scroll href="#block_6"> Слайдер </a>
 					</li>
 				</ul>
 			</nav>
@@ -72,20 +83,27 @@
 		<div class="container">
 			<div class="row justify-content-center text-center">
 				<div class="col-12 col-sm-9 col-md-12 col-xl-9">
-					<div class="block-title block-title_light block-1__block-title "> Привет! Я твое <span class="block-title__subtitle">тестовое задание</span>
+					<div class="block-title block-title_light block-1__block-title "> Привет! Я твое <span
+						class="block-title__subtitle">тестовое задание</span>
 						<div class="block-1__astronaut"><img alt="" src="images/space_astronaut.png"></div>
 					</div>
 				</div>
 				<div class="col-12">
-					<div class="block-1__description">Я состою из разнообразных блоков и элементов, которые круто смотрятся вместе, особенно если их дополнить простой анимацией. Например, в этом блоке, космонавт должен парить при скролле при помощи параллакс-эффекта. </div>
+					<div class="block-1__description">Я состою из разнообразных блоков и элементов, которые круто
+						смотрятся вместе, особенно если их дополнить простой анимацией. Например, в этом блоке,
+						космонавт должен парить при скролле при помощи параллакс-эффекта.
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-	<a class="block-1__ready" href="#block-2" data-scroll>
+	<a class="block-1__ready" data-scroll href="#block-2">
 		<span>Я готов!</span>
-		<svg class="bi bi-arrow-down" fill="currentColor" height="16" viewBox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg">
-			<path d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z" fill-rule="evenodd" />
+		<svg class="bi bi-arrow-down" fill="currentColor" height="16" viewBox="0 0 16 16" width="16"
+			 xmlns="http://www.w3.org/2000/svg">
+			<path
+				d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z"
+				fill-rule="evenodd"/>
 		</svg>
 	</a>
 </div>
@@ -95,16 +113,25 @@
 			<div class="row text-left">
 				<div class="col-12 col-lg-6 col-md-8 ">
 					<div class="block-2__left ">
-						<div class="block-title block-title_dark block-2__block-title"> Для начала: <span class="block-title__subtitle">текстовый блок в 2 колонки</span>
+						<div class="block-title block-title_dark block-2__block-title"> Для начала: <span
+							class="block-title__subtitle">текстовый блок в 2 колонки</span>
 						</div>
 					</div>
 				</div>
 				<div class="col-12 col-lg-5 col-md-8 offset-lg-1">
 					<div class="small-text block-2__right block-2__small-text">
-						<div class="text"> Для мелкого текста используется более удобочитаемый шрифт, ведь надо с заботой относиться к пользователям сайта. По этой же причине высота строк в этом абзаце немного увеличена, так как разреженный текст читать проще. Ну а чтобы тебе было интереснее, создай кнопку, вызывающую форму :) </div>
+						<div class="text"> Для мелкого текста используется более удобочитаемый шрифт, ведь надо с
+							заботой относиться к пользователям сайта. По этой же причине высота строк в этом абзаце
+							немного увеличена, так как разреженный текст читать проще. Ну а чтобы тебе было интереснее,
+							создай кнопку, вызывающую форму :)
+						</div>
 						<a class="open_form popup" href="#feedback">
-                                    <span>Открыть форму <svg class="bi bi-arrow-right" fill="currentColor" height="16" viewBox="0 0 16 16" width="16" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" fill-rule="evenodd" />
+                                    <span>Открыть форму <svg class="bi bi-arrow-right" fill="currentColor" height="16"
+															 viewBox="0 0 16 16" width="16"
+															 xmlns="http://www.w3.org/2000/svg">
+                                            <path
+												d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"
+												fill-rule="evenodd"/>
                                         </svg></span>
 						</a>
 					</div>
@@ -128,7 +155,10 @@
 											<div>Добавим красок:</div>
 											<span class="block-title__subtitle">изображение</span>
 										</div>
-										<div class="small-text block-3__small-text">По структуре этот блок очень похож на предыдущий, но две колонки в данном случае содержат разный контент: текст и изображение. </div>
+										<div class="small-text block-3__small-text">По структуре этот блок очень похож
+											на предыдущий, но две колонки в данном случае содержат разный контент: текст
+											и изображение.
+										</div>
 									</div>
 								</div>
 							</div>
@@ -145,7 +175,10 @@
 									<div>Добавим красок:</div>
 									<span class="block-title__subtitle">изображение</span>
 								</div>
-								<div class="small-text block-3__small-text">По структуре этот блок очень похож на предыдущий, но две колонки в данном случае содержат разный контент: текст и изображение. </div>
+								<div class="small-text block-3__small-text">По структуре этот блок очень похож на
+									предыдущий, но две колонки в данном случае содержат разный контент: текст и
+									изображение.
+								</div>
 							</div>
 						</div>
 					</div>
@@ -160,23 +193,30 @@
 			<div class="cards">
 				<div class="row">
 					<div class="col-12 col-lg-4">
-						<div class="card" style="background-image: url('images/alexander-andrews-fsH1KjbdjE8-unsplash-resize.jpg')">
+						<div class="card"
+							 style="background-image: url('images/alexander-andrews-fsH1KjbdjE8-unsplash-resize.jpg')">
 							<div class="card__text text-left">
 								<div class="card__title title"> Блок с плитками и краткими текстам на них</div>
-								<div class="card__small-text small-text"> Не забудь про эффект наведения,чтобы добавить интерактивности </div>
+								<div class="card__small-text small-text"> Не забудь про эффект наведения,чтобы добавить
+									интерактивности
+								</div>
 							</div>
 						</div>
 					</div>
 					<div class="col-12 col-lg-4">
-						<div class="card" style="background-image: url('images/johny-goerend-Oz2ZQ2j8We8-unsplash-resize.jpg')">
+						<div class="card"
+							 style="background-image: url('images/johny-goerend-Oz2ZQ2j8We8-unsplash-resize.jpg')">
 							<div class="card__text text-left">
 								<div class="card__title title"> Так выглядит карточка, если на нее навести курсор</div>
-								<div class="card__small-text small-text"> Она приподнимается, появляется тень в тон фотографии, текст непрозрачный </div>
+								<div class="card__small-text small-text"> Она приподнимается, появляется тень в тон
+									фотографии, текст непрозрачный
+								</div>
 							</div>
 						</div>
 					</div>
 					<div class="col-12 col-lg-4">
-						<div class="card" style="background-image: url('images/nate-rayfield-_WR6tUIAJe8-unsplash-resize.jpg')">
+						<div class="card"
+							 style="background-image: url('images/nate-rayfield-_WR6tUIAJe8-unsplash-resize.jpg')">
 							<div class="card__text text-left">
 								<div class="card__title title"> Фотография на фоне карточки не должна мешать</div>
 								<div class="card__small-text small-text"> Текст здесь на первом месте</div>
@@ -193,21 +233,26 @@
 		<div class="container text-center">
 			<div class="row justify-content-center">
 				<div class="col-9 col-md-10">
-					<div class="block-title block-title_light block-5__block-title"> Добавим динамики: элементы реагируют <span class="block-title__subtitle">на скролл</span>
+					<div class="block-title block-title_light block-5__block-title"> Добавим динамики: элементы
+						реагируют <span class="block-title__subtitle">на скролл</span>
 					</div>
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-12 col-sm-10 m-auto">
 					<!--указать с классом блока?-->
-					<div class="monitor-text monitor-text_top small-text text-center"> Блок простой по составу, но каждый его элемент должен приходить в движение при скролле страницы. </div>
+					<div class="monitor-text monitor-text_top small-text text-center"> Блок простой по составу, но
+						каждый его элемент должен приходить в движение при скролле страницы.
+					</div>
 				</div>
 				<div class="col-12 m-auto">
 					<img alt="" src="images/iMac_flat.png" width="100%">
 				</div>
 				<div class="col-12 col-sm-10 m-auto">
 					<!--или указать сразу класс элемента?-->
-					<div class="monitor-text_bottom small-text"> Строки тексста, расположенные ниже, при скролле должны сами по себе двигаться, как бесконечные бегущие строки. </div>
+					<div class="monitor-text_bottom small-text"> Строки тексста, расположенные ниже, при скролле должны
+						сами по себе двигаться, как бесконечные бегущие строки.
+					</div>
 				</div>
 			</div>
 			<div class="icons text-center">
@@ -215,36 +260,48 @@
 					<div class="col-12 col-sm-8 col-md-5 col-lg-4 m-auto">
 						<div class="icon">
 							<div class="icon__svg">
-								<svg class="bi bi-star" fill="currentColor" height="40" viewBox="0 0 16 16" width="40" xmlns="http://www.w3.org/2000/svg">
-									<path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z" />
+								<svg class="bi bi-star" fill="currentColor" height="40" viewBox="0 0 16 16" width="40"
+									 xmlns="http://www.w3.org/2000/svg">
+									<path
+										d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"/>
 								</svg>
 							</div>
 							<div class="icon__title">Иконка и текст</div>
-							<div class="icon__description small-text">Иконки с описанием расположены в 3 колонки и появляются при скролле по очереди </div>
+							<div class="icon__description small-text">Иконки с описанием расположены в 3 колонки и
+								появляются при скролле по очереди
+							</div>
 							<div class="icon__line"></div>
 						</div>
 					</div>
 					<div class="col-12 col-sm-8 col-md-5 col-lg-4 m-auto">
 						<div class="icon">
 							<div class="icon__svg">
-								<svg class="bi bi-star" fill="currentColor" height="40" viewBox="0 0 16 16" width="40" xmlns="http://www.w3.org/2000/svg">
-									<path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z" />
+								<svg class="bi bi-star" fill="currentColor" height="40" viewBox="0 0 16 16" width="40"
+									 xmlns="http://www.w3.org/2000/svg">
+									<path
+										d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"/>
 								</svg>
 							</div>
 							<div class="icon__title">Анимация</div>
-							<div class="icon__description small-text">Появление иконок происходит через плавную смену прозрачности и небольшой подъем </div>
+							<div class="icon__description small-text">Появление иконок происходит через плавную смену
+								прозрачности и небольшой подъем
+							</div>
 							<div class="icon__line"></div>
 						</div>
 					</div>
 					<div class="col-12 col-sm-8 col-md-5 col-lg-4 m-auto">
 						<div class="icon">
 							<div class="icon__svg">
-								<svg class="bi bi-star" fill="currentColor" height="40" viewBox="0 0 16 16" width="40" xmlns="http://www.w3.org/2000/svg">
-									<path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z" />
+								<svg class="bi bi-star" fill="currentColor" height="40" viewBox="0 0 16 16" width="40"
+									 xmlns="http://www.w3.org/2000/svg">
+									<path
+										d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"/>
 								</svg>
 							</div>
 							<div class="icon__title">При наведении</div>
-							<div class="icon__description small-text">Также все иконки должны реагировать на наведение курсора, по примеру этой иконки. </div>
+							<div class="icon__description small-text">Также все иконки должны реагировать на наведение
+								курсора, по примеру этой иконки.
+							</div>
 							<div class="icon__line"></div>
 						</div>
 					</div>
@@ -263,6 +320,36 @@
 		</div>
 	</div>
 </div>
+<div class="block_6 section" id="block_6">
+	<div class="section__row-content">
+		<div class="container">
+			<div class="row flex-column">
+				<div class="col-12 col-md-10 col-lg-7">
+					<div class="block-title block-title_dark">И снова текст:<span class="block-title__subtitle">несколько
+абзацев
+в слайдере</span>
+					</div>
+				</div>
+				<div class="col-12 col-sm-10 col-lg-9">
+					<div class="slide">
+						<div class="slide__img">
+							<img src="../images/Icon_metro-quote.png" alt="">
+						</div>
+						<div class="slide__text">
+							Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt
+							ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo
+							dolores.
+						</div>
+						<div class="slide__subtitle">
+							Lorem ipsum dolor sit amet.
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
 <div class="block_7 section" id="block_7">
 	<div class="section__row-content">
 		<div class="container">
@@ -272,9 +359,9 @@
 					</div>
 				</div>
 				<div class="col-12 col-sm-8 col-md-6">
-						<button class="open-form-btn popup" href="#feedback">
-							<span>Открыть форму!</span>
-						</button>
+					<a class="btn popup" href="#feedback">
+						<span>Открыть форму!</span>
+					</a>
 				</div>
 			</div>
 		</div>
@@ -293,6 +380,15 @@
 				<img alt="" src="../images/WeJet-logo.png">
 			</div>
 		</div>
+	</div>
+	<div class="owl-carousel owl-theme">
+		<div> Your Content </div>
+		<div> Your Content </div>
+		<div> Your Content </div>
+		<div> Your Content </div>
+		<div> Your Content </div>
+		<div> Your Content </div>
+		<div> Your Content </div>
 	</div>
 </footer>
 </body>

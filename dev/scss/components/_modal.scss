@@ -1,0 +1,42 @@
+.wj-modal {
+	background: #222;
+	border: 1px solid #707070;
+	padding: 30px 20px;
+	max-width: 260px;
+
+}
+
+@media (min-width: $bp-sm) {
+	.wj-modal {
+		padding: 30px;
+		max-width: 580px;
+
+	}
+}
+
+
+@media (min-width: $bp-md) {
+	.wj-modal {
+		position: relative;
+		padding: 70px 60px;
+		max-width: 690px;
+		.mfp-close {
+			color: rgba(255,255,255, .3);
+		}
+	}
+}
+
+@media (min-width: $bp-lg) {
+	.wj-modal {
+		padding: 80px;
+		max-width: 900px;
+	}
+}
+
+@media(min-width: $bp-xl) {
+	.wj-modal {
+		padding: 80px 100px;
+		max-width: 930px;
+
+	}
+}

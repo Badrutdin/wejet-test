@@ -1,11 +1,17 @@
-.open-form-btn {
+.btn {
 	position: relative;
-	font: 16px/50px $font-primary;
-	color: #FFFFFF;
-	border: 1px solid #FFFFFF;
-	width: 247px;
-	height: 68px;
-	transition: transform $transition_speed ease-out;
+    font: 16px/50px"Montserrat",sans-serif;
+    color: #fff;
+    border: 1px solid #fff;
+    width: 100%;
+    max-width: 247px;
+    height: 68px;
+    transition: transform .2s ease-out;
+    display: inline-flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
 
 	&::before {
 		transition: transform $transition_speed ease-out;
@@ -31,27 +37,27 @@
 }
 
 @media (min-width: $bp-sm) {
-	.open-form-btn {
-		width: 263px;
+	.btn {
+		max-width: 263px;
 	}
 }
 
 @media (min-width: $bp-md) {
-	.open-form-btn {
-		width: 320px;
+	.btn {
+		max-width: 320px;
 	}
 }
 
 @media (min-width: $bp-lg) {
-	.open-form-btn {
-		width: 354px;
+	.btn {
+		max-width: 354px;
 		height: 68px;
 	}
 }
 
 @media (min-width: $bp-xl) {
-	.open-form-btn {
-		width: 354px;
+	.btn {
+		max-width: 354px;
 		height: 68px;
 	}
 }

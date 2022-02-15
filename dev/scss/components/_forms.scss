@@ -1,28 +1,45 @@
 .feedback {
-	position: relative;
-	padding: 100px;
-	background: #222222;
 	color: #FFFFFF;
-	max-width: 80%;
 	margin: 0 auto;
+}
 
-	&__input {
-		background: #000;
-		border: none;
-		border-bottom: 2px solid #FFFFFF;
-		padding: 10px;
-		width: 700px;
-		color: #FFFFFF;
-		font: normal normal normal 30px/50px $font-primary;
+.form-fields {
+	&__field {
+		padding: 0;
+
+		.btn {
+			max-width: 200px;
+		}
+
+		&:not(:last-child) {
+			margin-bottom: 44px;
+		}
 	}
+}
 
-	&::placeholder {
-		color: #FFFFFF;
-		font: normal normal normal 30px/50px $font-primary;
-	}
-
-	.block-title {
-		color: #FFFFFF;
+@media (min-width: $bp-sm) {
+	.form-fields {
+		&__field {
+			.btn {
+				max-width: 344px;
+			}
+		}
 	}
 
 }
+
+@media (min-width: $bp-md) {
+	.form-fields {
+		&__field {
+			.btn {
+				max-width: 364px;
+			}
+
+			&:not(:last-child) {
+				margin-bottom: 70px;
+			}
+		}
+	}
+
+}
+
