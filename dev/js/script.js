@@ -1,6 +1,6 @@
 const actions = function () {
   $('.popup').magnificPopup({});
-  $('.owl-carousel').owlCarousel();
+  // $('.owl-carousel').owlCarousel();
   $(document).on('click', '[data-scroll]', function (e) {
     e.preventDefault();
     let target = $(this.getAttribute('href')).get(0);
