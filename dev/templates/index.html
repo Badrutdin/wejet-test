@@ -20,34 +20,31 @@
 </head>
 <body>
 <div class="wj-modal feedback mfp-hide" id="feedback">
-	<form action="">
-		<div class="container">
-			<div class="row">
-				<div class="col">
-					<div class="block-title"><span class="block-title__subtitle">Это что?</span> Это колбэк</div>
-				</div>
-			</div>
-			<div class="form-fields row">
-				<div class="form-fields__field col-12">
-					<div class="animated-input">
-						<label class="animated-input__label" for="feedback-name">Представьтесь</label>
-						<input class="feedback-input  animated-input__input" id="feedback-name" type="text">
-					</div>
-				</div>
-				<div class="form-fields__field col-12">
-					<div class="animated-input">
-						<label class="animated-input__label" for="feedback-number">Ваш номер телефона</label>
-						<input class="feedback-input animated-input__input" id="feedback-number" type="tel">
-					</div>
-				</div>
-				<div class="form-fields__field col-12">
-					<a class="btn">
-						<span>Перезвоните мне</span>
-					</a>
-				</div>
-			</div>
+	<form action="/ajax/handleTest.json" method="POST" data-ajax-form>
+		<h2 class="block-title"><span class="block-title__subtitle">Это что?</span> Это колбэк</h2>
+
+		<div class="form-result">
 		</div>
 
+		<div class="form-fields row">
+			<div class="form-fields__field col-12">
+				<div class="animated-input">
+					<label class="animated-input__label" for="feedback-name">Представьтесь</label>
+					<input class="feedback-input  animated-input__input" id="feedback-name" type="text" data-required>
+				</div>
+			</div>
+			<div class="form-fields__field col-12">
+				<div class="animated-input">
+					<label class="animated-input__label" for="feedback-number">Ваш номер телефона</label>
+					<input class="feedback-input animated-input__input" id="feedback-number" type="tel">
+				</div>
+			</div>
+			<div class="form-fields__field col-12">
+				<button class="btn" type="submit">
+					<span>Перезвоните мне</span>
+				</button>
+			</div>
+		</div>
 	</form>
 </div>
 

@@ -36,6 +36,16 @@
 	}
 }
 
+
+/**
+* Disabled
+*/
+
+.btn_disabled {
+	opacity: 0.5;
+	cursor: default;
+}
+
 @media (min-width: $bp-sm) {
 	.btn {
 		max-width: 263px;

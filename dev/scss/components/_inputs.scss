@@ -10,6 +10,14 @@
 	width: 100%;
 }
 
+/**
+* Error
+*/
+
+.feedback-input_error {
+	border-color: $color-error;
+}
+
 .animated-input{
 		position: relative;
 	&__input{
