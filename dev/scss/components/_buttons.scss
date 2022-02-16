@@ -25,7 +25,7 @@
 		top: 10px;
 	}
 
-	&:hover {
+	&:hover, &:focus {
 		transform: translate(10px, 5px);
 		background-color: #FFFFFF;
 		color: black;
@@ -34,6 +34,16 @@
 			transform: translate(-10px, -5px);
 		}
 	}
+}
+
+
+/**
+* Disabled
+*/
+
+.btn_disabled {
+	opacity: 0.5;
+	cursor: default;
 }
 
 @media (min-width: $bp-sm) {

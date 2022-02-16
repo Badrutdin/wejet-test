@@ -1,0 +1,21 @@
+.c-alert {
+	display: block;
+	border: 1px solid;
+	padding: 20px 15px;
+	margin-bottom: 20px;
+}
+
+.c-alert_success {
+	border-color: $color-success;
+	background-color: rgba($color-success, 20%);
+}
+
+.c-alert_error {
+	border-color: $color-error;
+	background-color: rgba($color-error, 20%);
+}
+
+.c-alert_warning {
+	border-color: $color-warning;
+	background-color: rgba($color-warning, 20%);
+}
