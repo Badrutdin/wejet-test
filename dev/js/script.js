@@ -1,114 +1,32 @@
-const actions = function () {
-  $('.popup').magnificPopup({});
-  // $('.owl-carousel').owlCarousel();
-  $(document).on('click', '[data-scroll]', function (e) {
-    e.preventDefault();
-    let target = $(this.getAttribute('href')).get(0);
-    if (target) {
-      $('html, body').stop().animate({
-        scrollTop: $(target).offset().top
-      }, 200);
-    }
-  })
-  $(document).on('focus', '.animated-input__input', function () {
-    $(this).closest('.animated-input').find('.animated-input__label').addClass('animated-input__label_focus')
-  });
-  $(document).on('blur', '.animated-input__input', function () {
-    $(this).closest('.animated-input').find('.animated-input__label').removeClass('animated-input__label_focus')
-  });
-  $(document).on('input', '.animated-input__input', function () {
-    if ($(this).val() !== '') {
-      $(this).addClass('animated-input__input_changed')
-      $(this).closest('.animated-input').find('.animated-input__label').addClass('animated-input__label_changed')
-    } else {
-      $(this).removeClass('animated-input__input_changed')
-      $(this).closest('.animated-input').find('.animated-input__label').removeClass('animated-input__label_changed')
-    }
-  });
-  // просто добавил поэксперементировать
-  $(document).on('focus', '[type="tel"]',function(){
-    if ($(this).val() === ''){
-    $(this).val('+7')
-    $(this).trigger('input')
-    }
-  })
-  $(document).on('blur', '[type="tel"]',function(){
-    if ($(this).val() === '+7'){
-      $(this).val('')
-      $(this).trigger('input')
-    }
-  })
-
-  // FORM
-  $(document).on('submit', '[data-ajax-form]', function (e) {
-    e.preventDefault();
-
-    let form = e.target;
-    let formData = new FormData(form);
-    let result = form.querySelector('.form-result');
-    let btnSubmit = form.querySelector('.btn[type="submit"]');
-
-    const validationConfig = {
-      form: form,
-      errorClass: 'feedback-input_error'
-    }
-
-    const isValid = validateForm(validationConfig);
-
-    if (!isValid) {
-      return false;
-    }
-
-    setControlState(btnSubmit, 'disabled', 'btn_disabled');
-
-    $.ajax({
-      method: form.method,
-      url: form.action,
-      processData: false,
-      data: formData,
-      dataType: 'json',
-      success: function (response) {
-        console.log(response);
-
-        let resultMessage = setResultMessage({
-          status: response.STATUS,
-          responseText: response.STATUS === 'success' ? response.NOTE : response.ERRORS
-        });
-
-        if (response.STATUS === 'success') {
-          $(result).html(resultMessage);
-
-          form.reset();
-
-          setTimeout(function () {
-            result.innerHTML = '';
-          }, 3000);
-        } else if (response.STATUS === 'error') {
-          $(result).html(resultMessage);
-        }
-      },
-      error: function (response) {
-        console.log(response);
-
-        let resultMessage = setResultMessage({
-          status: 'error',
-          responseText: 'Неизвестная ошибка'
-        });
-
-        $(result).html(resultMessage);
-      },
-      complete: function () {
-        setControlState(btnSubmit, 'default', 'btn_disabled');
+function setFieldState(input, state) {
+  // получение тега, что б в случае ошибочного использования ф-ии с другими полями
+  // отрабатывала другая логика (если будет)
+  // либо функция не отрабатывала вообще
+  if (input.prop("tagName") === 'INPUT') {
+    if (state === 'focusIn') {
+      input.closest('.animated-input').find('.animated-input__label').addClass('animated-input__label_focus')
+    } else if (state === 'focusOut') {
+      if (input.val() === '') {
+        input.closest('.animated-input').find('.animated-input__label').removeClass('animated-input__label_focus')
       }
-    });
-  });
+    } else if (state === 'changed') {
+      if (input.val() !== '') {
+        input.closest('.animated-input').find('.animated-input__label').addClass('animated-input__label_changed')
+      } else {
+        input.closest('.animated-input').find('.animated-input__label').removeClass('animated-input__label_changed')
+      }
+    }
+  }
+  // if(input.prop("tagName") === 'ANOTHER TAG'){
+  //   another logic
+  // }
 }
 
-function formatResult (params) {
+function formatResult(params) {
   let result = '';
 
   if (typeof params.responseText === 'object') {
-    let responseArray = $.map(params.responseText, function(value) {
+    let responseArray = $.map(params.responseText, function (value) {
       return value;
     });
 
@@ -122,7 +40,8 @@ function formatResult (params) {
   return result;
 }
 
-function setResultMessage (params) {
+// инициализация сообщения
+function setResultMessage(params) {
   let el = document.createElement('div');
   let classes = {
     success: 'success',
@@ -140,9 +59,10 @@ function setResultMessage (params) {
   return el;
 }
 
-function setControlState (control, state, disabledClass) {
+// состояние кнопки
+function setControlState(control, state, disabledClass) {
   let inputsArray = ['button', 'input'];
-
+  // отключаем элемент взависимости от переданного сотояния
   switch (state) {
     case 'default':
       control.classList.remove(disabledClass);
@@ -161,7 +81,7 @@ function setControlState (control, state, disabledClass) {
   }
 }
 
-function validateForm (params) {
+function validateForm(params) {
   let isValid = true;
   let controls = params.form.querySelectorAll('input[required], input[data-required]');
 
@@ -189,5 +109,104 @@ function validateForm (params) {
 }
 
 $(document).ready(function () {
-  actions();
+
+  $('.popup').magnificPopup({});
+
+  // $('.owl-carousel').owlCarousel();
+
+  $(document).on('click', '[data-scroll]', function (e) {
+    e.preventDefault();
+    let target = $(this.getAttribute('href')).get(0);
+    if (target) {
+      $('html, body').stop().animate({
+        scrollTop: $(target).offset().top
+      }, 200);
+    }
+  })
+
+  $('input[type=tel]').mask('+7 (000) 000 00 00');
+
+  $(document).on('focus', '.animated-input__input', function () {
+    setFieldState($(this), 'focusIn')
+  });
+  $(document).on('blur', '.animated-input__input', function () {
+    setFieldState($(this), 'focusOut')
+
+  });
+  $(document).on('input', '.animated-input__input', function () {
+    setFieldState($(this), 'changed')
+  });
+
+
+  // FORM
+  $(document).on('submit', '[data-ajax-form]', function (e) {
+    // сбрасываем формы
+    e.preventDefault();
+    // определяем форму
+    let form = e.target;
+    // определяем данные
+    let formData = new FormData(form);
+    // определяем контейнер для сообщения
+    let result = form.querySelector('.form-result');
+    // определяем кнопку
+    let btnSubmit = form.querySelector('.btn[type="submit"]');
+    // создаем конфиг для передачи в функцию валидации
+    const validationConfig = {
+      form: form,
+      errorClass: 'feedback-input_error'
+    }
+    // выполняется валидация
+    const isValid = validateForm(validationConfig);
+    // в случае невалидных данных прерываем действия
+    if (!isValid) {
+      return false;
+    }
+    // отключаем кнопку до завершения отправки
+    setControlState(btnSubmit, 'disabled', 'btn_disabled');
+
+    $.ajax({
+      method: form.method,
+      url: form.action,
+      processData: false,
+      data: formData,
+      dataType: 'json',
+      success: function (response) {
+        console.log(response);
+        // инициализируем элемент сообщения
+        let resultMessage = setResultMessage({
+          status: response.STATUS,
+          responseText: response.STATUS === 'success' ? response.NOTE : response.ERRORS
+        });
+
+        if (response.STATUS === 'success') {
+          // кладем сообщение в контейнер
+          $(result).html(resultMessage);
+          // сбрасываем состояние формы
+          form.reset();
+          // сообщение исчезает через 3 секунды
+          setTimeout(function () {
+            result.innerHTML = '';
+          }, 3000);
+        } else if (response.STATUS === 'error') {
+          // кладем сообщение в контейнер
+          $(result).html(resultMessage);
+        }
+      },
+      error: function (response) {
+        console.log(response);
+        // инициализируем элемент сообщения
+        let resultMessage = setResultMessage({
+          status: 'error',
+          responseText: 'Неизвестная ошибка'
+        });
+        // кладем сообщение в контейнер
+        $(result).html(resultMessage);
+      },
+      complete: function () {
+        // включаем кнопку
+        setControlState(btnSubmit, 'default', 'btn_disabled');
+      }
+    });
+  });
+
 });

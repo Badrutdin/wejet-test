@@ -69,6 +69,7 @@ body {
 
 		svg {
 			transition: transform $transition_speed ease-out;
+			vertical-align: middle;
 		}
 
 		&:hover {

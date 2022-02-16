@@ -22,10 +22,7 @@
 		position: relative;
 	&__input{
 		transition: $transition_speed;
-		height: 34px;
-		&_changed{
-			height: 64px;
-		}
+		height: 64px;
 	}
 	&__label{
 		transition: $transition_speed;
@@ -48,10 +45,7 @@
 	}
 	.animated-input{
 		&__input{
-			height: 60px;
-			&_changed{
-				height: 100px;
-			}
+			height: 100px;
 		}
 		&__label{
 			font-size: 24px;
@@ -67,10 +61,7 @@
 	}
 	.animated-input{
 		&__input{
-			height: 60px;
-			&_changed{
-				height: 100px;
-			}
+			height: 100px;
 		}
 		&__label{
 			font-size: 24px;
