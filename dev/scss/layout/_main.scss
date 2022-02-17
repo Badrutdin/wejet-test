@@ -6,20 +6,23 @@ body {
 	font-size: 14px;
 	color: $color-text;
 }
-
+ .cards{
+	 margin-bottom: -30px;
+ }
 .block-1 {
 	min-height: 100vh;
 	padding-top: 100px;
 	background-color: #000000;
 	background-repeat: no-repeat;
 	background-size: 110% 110%;
+	background-position-y: 100px;
 	position: relative;
 
 	&__block-title {
+		margin-bottom: 20px;
 		font-size: 40px;
 		line-height: 48px;
 		letter-spacing: 0.8px;
-		margin: 0 auto;
 	}
 
 	&__astronaut {
@@ -94,7 +97,7 @@ body {
 	}
 
 	&__small-text {
-		color: #222222;
+		color: black;
 	}
 }
 
@@ -106,7 +109,7 @@ body {
 		background-color: #4A2B39;
 		background-image: url('../../images/nasa-rTZW4f02zY8-unsplash-resize.jpg');
 		background-size: cover;
-		background-position: 0, 0, 0, 100px, 0, 0;
+		background-position:-80px 0;
 		background-repeat: no-repeat;
 	}
 
@@ -118,19 +121,25 @@ body {
 
 .block-5 {
 	background: #222222;
+		.icons{
+			margin-bottom: -50px;
+			.icon{
+				margin-bottom: 50px;
+			}
+		}
 
 	.monitor-text {
 		&_top {
-			margin: 0 auto 25px;
+			margin: 26px auto 26px;
 		}
 
 		&_bottom {
-			margin: 25px auto 0;
+			margin: 26px auto 40px;
 		}
 	}
 
 	&__block-title {
-		margin: 0 auto;
+		margin-bottom: 0;
 	}
 
 	.tickers {
@@ -148,10 +157,6 @@ body {
 				margin-bottom: 20px;
 			}
 		}
-	}
-
-	.icons {
-		padding-top: 200px;
 	}
 
 }

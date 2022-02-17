@@ -1,13 +1,13 @@
 .menu-top {
 	padding: 16px 0 0 0;
-	margin: 0 -8px;
+	margin: 0 -10px;
 	list-style: none;
 	display: flex;
 	justify-content: center;
 	flex-wrap: wrap;
 
 	li {
-		padding: 0 8px;
+		padding: 0 10px;
 		display: inline-block;
 	}
 }
@@ -27,11 +27,11 @@
 @media (min-width: $bp-sm) {
 	.menu-top {
 		padding: 0;
-		margin: 0 -12;
+		margin: 0 -15px;
 		justify-content: flex-end;
 
 		li {
-			padding: 12px;
+			padding:0 15px;
 
 		}
 	}
@@ -39,10 +39,10 @@
 
 @media (min-width: $bp-md) {
 	.menu-top {
-		margin: 0 -22;
+		margin: 0 -26px;
 
 		li {
-			padding: 0 22px;
+			padding: 0 26px;
 
 		}
 	}
