@@ -144,6 +144,7 @@ body {
 
 	.tickers {
 		&__ticker {
+			display: inline-block;
 			font: 30px/70px $font-secondary;
 			letter-spacing: 0.6px;
 			color: #555555;
@@ -160,14 +161,23 @@ body {
 	}
 
 }
-
-.block_7 {
+.block-6{
+	background-color: #EEF5F6;
+}
+.block-7 {
+	height: 570px;
 	background-color: #222222;
 	background-image: url('../../images/nasa-pd4lo70LdbI-unsplash-resize.png');
 	background-size: contain;
 	background-position-x: 100%;
-	background-position-y: 50%;
+	background-position-y: 100%;
 	background-repeat: no-repeat;
 }
 
 
+.owl-stage{
+	display: flex;
+}
+.str_wrap{
+	background-color: inherit;
+}

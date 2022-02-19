@@ -1,14 +1,14 @@
 .wj-modal {
 	background: #222;
-	border: 1px solid #707070;
 	padding: 30px 20px;
 	max-width: 260px;
-
+	position: relative;
 }
 
 @media (min-width: $bp-sm) {
 	.wj-modal {
 		padding: 30px;
+
 		max-width: 580px;
 
 	}
@@ -28,14 +28,14 @@
 
 @media (min-width: $bp-lg) {
 	.wj-modal {
-		padding: 80px;
+		padding: 76px 82px;
 		max-width: 900px;
 	}
 }
 
 @media(min-width: $bp-xl) {
 	.wj-modal {
-		padding: 80px 100px;
+		padding: 76px 96px;
 		max-width: 930px;
 
 	}

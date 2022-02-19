@@ -4,41 +4,36 @@
 }
 
 .form-fields {
+	margin-top: -46px;
+	.btn {
+		max-width: 200px;
+		margin-top: 46px;
+	}
 	&__field {
-
-		.btn {
-			max-width: 200px;
-		}
-
-		&:not(:last-child) {
-			margin-bottom: 15px;
-		}
+			margin-top: 46px;
 	}
 }
 
 @media (min-width: $bp-sm) {
 	.form-fields {
+		.btn {
+			max-width: 344px;
+		}
 		&__field {
-			.btn {
-				max-width: 344px;
-			}
 		}
 	}
-
 }
 
 @media (min-width: $bp-md) {
 	.form-fields {
+		margin-top: -70px;
+		.btn {
+			max-width: 364px;
+			margin-top: 70px;
+		}
 		&__field {
-			.btn {
-				max-width: 364px;
-			}
-
-			&:not(:last-child) {
-				margin-bottom: 30px;
-			}
+			margin-top: 70px;
 		}
 	}
-
 }
 
