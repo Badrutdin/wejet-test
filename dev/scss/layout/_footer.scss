@@ -1,12 +1,15 @@
 .footer {
 	background-color: #222222;
+	padding-bottom: 50px;
 
 	&__small-text {
 		color: #FFFFFF;
-		margin: 0 auto;
+		max-width: 197px;
+
 	}
 
 	&__block-title {
+		margin-bottom: 15px;
 		color: #FFFFFF;
 
 		span {
@@ -17,11 +20,19 @@
 	}
 
 	&__logo {
-		width: 160px;
-		margin: 0 auto 50px;
+		width: 162px;
+		margin: 0 auto;
 
 		img {
 			width: 100%;
+		}
+	}
+}
+@media (min-width: $bp-sm) {
+	.footer{
+		&__small-text{
+			max-width: 100%;
+
 		}
 	}
 }
@@ -31,6 +42,7 @@
 		&__small-text {
 			font-size: 20px;
 			line-height: 50px;
+
 		}
 	}
 }
@@ -42,6 +54,7 @@
 		}
 
 		&__small-text {
+			max-width: 100%;
 			font-size: 20px;
 			line-height: 50px;
 		}

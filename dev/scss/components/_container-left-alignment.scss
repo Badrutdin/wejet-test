@@ -1,0 +1,31 @@
+
+.container-left-alignment {
+	margin-left: calc((100% - 271px) / 2);
+}
+
+@media (min-width: $bp-sm) {
+	.container-left-alignment {
+		margin-left: calc((100% - 591px) / 2);
+	}
+
+}
+
+@media (min-width: $bp-md) {
+	.container-left-alignment {
+		margin-left: calc((100% - 705px) / 2)
+	}
+}
+
+@media (min-width: $bp-lg) {
+	.container-left-alignment {
+		margin-left: calc((100% - 921px) / 2)
+	}
+
+}
+
+@media (min-width: $bp-xl) {
+	.container-left-alignment {
+		margin-left: calc((100% - 1137px) / 2)
+	}
+
+}

@@ -1,25 +1,17 @@
 function setFieldState(input, state) {
-  // получение тега, что б в случае ошибочного использования ф-ии с другими полями
-  // отрабатывала другая логика (если будет)
-  // либо функция не отрабатывала вообще
-  if (input.prop("tagName") === 'INPUT') {
-    if (state === 'focusIn') {
-      input.closest('.animated-input').find('.animated-input__label').addClass('animated-input__label_focus')
-    } else if (state === 'focusOut') {
-      if (input.val() === '') {
-        input.closest('.animated-input').find('.animated-input__label').removeClass('animated-input__label_focus')
-      }
-    } else if (state === 'changed') {
-      if (input.val() !== '') {
-        input.closest('.animated-input').find('.animated-input__label').addClass('animated-input__label_changed')
-      } else {
-        input.closest('.animated-input').find('.animated-input__label').removeClass('animated-input__label_changed')
-      }
+  if (state === 'focusIn') {
+    input.closest('.animated-input').find('.animated-input__label').addClass('animated-input__label_focus')
+  } else if (state === 'focusOut') {
+    if (input.val() === '') {
+      input.closest('.animated-input').find('.animated-input__label').removeClass('animated-input__label_focus')
+    }
+  } else if (state === 'changed') {
+    if (input.val() !== '') {
+      input.closest('.animated-input').find('.animated-input__label').addClass('animated-input__label_changed')
+    } else {
+      input.closest('.animated-input').find('.animated-input__label').removeClass('animated-input__label_changed')
     }
   }
-  // if(input.prop("tagName") === 'ANOTHER TAG'){
-  //   another logic
-  // }
 }
 
 function formatResult(params) {
@@ -108,11 +100,69 @@ function validateForm(params) {
   return isValid;
 }
 
+/**
+ *
+ * @param {event} event
+ * @param {string} modifier
+ */
+function setSlideStyle(event, modifier) {
+  const slider = event.target
+  const slides  = slider.querySelectorAll('.owl-item')
+  for (let i = 0; i <= slides.length; i++) {
+    let slide = $(slides[i]);
+    if (event.item.index === i) {
+      $(slide).removeClass(`${modifier}`)
+    } else {
+      $(slide).addClass(`${modifier}`)
+    }
+  }
+}
+
 $(document).ready(function () {
 
-  $('.popup').magnificPopup({});
+  $('.popup').magnificPopup({
+    closeMarkup:'<div ><img  class="mfp-close" title="Закрыть"  src="/images/Icon ionic-md-close.png" alt=""></div>'
+  });
+  $('.mfp-close').on( "click", function() {
+    $.magnificPopup.close();
+  });
+  const $slider = $('.wj-slider-container')
+  $slider.owlCarousel({
+    nav: false,
+    dots: false,
+    autoWidth: true,
+    margin: 50,
+    responsive: {
+      640: {
+        margin: 70
+      },
+      768: {
+        margin: 30
+      },
+      1024: {
+        margin: 108
+      },
+      1366: {
+        margin: 126
+      },
+    }
+  });
+  $slider.on('changed.owl.carousel', function (event) {
+  setSlideStyle(event,'wj-slide_secondary')
+  })
+  const tickerSpeed = 50
+  $('[wj-ticker="left"]').liMarquee({
+    scrollamount: tickerSpeed,
+    direction: 'left',
+    hoverstop: false
+  });
+  $('[wj-ticker="right"]').liMarquee({
+    scrollamount: tickerSpeed,
+    direction: 'right',
+    hoverstop: false
+  });
 
-  // $('.owl-carousel').owlCarousel();
+
 
   $(document).on('click', '[data-scroll]', function (e) {
     e.preventDefault();

@@ -6,7 +6,6 @@
 	border-bottom: 2px solid #FFFFFF;
 	color: #FFFFFF;
 	font-family: $font_secondary;
-	font-size: 20px;
 	width: 100%;
 }
 
@@ -21,18 +20,19 @@
 .animated-input{
 		position: relative;
 	&__input{
+		font-size: 20px;
 		transition: $transition_speed;
-		height: 64px;
 	}
 	&__label{
 		transition: $transition_speed;
-
 		position: absolute;
+		bottom: 15px;
 		font-size: 14px;
 		&_focus{
 			transform: translateY(-5px);
 		}
 		&_changed{
+			transform: translateY(-20px);
 			font-size: 11px;
 			color: $color_secondary;
 		}
@@ -40,16 +40,15 @@
 }
 
 @media (min-width: $bp-md) {
-	.feedback-input {
-		font-size: 40px;
-	}
 	.animated-input{
 		&__input{
-			height: 100px;
+			font-size: 40px;
 		}
 		&__label{
+			bottom: 25px;
 			font-size: 24px;
 			&_changed{
+				transform: translateY(-40px);
 				font-size: 14px;
 			}
 		}
@@ -57,11 +56,9 @@
 }
 @media (min-width: $bp-xl) {
 	.feedback-input {
-		font-size: 40px;
 	}
 	.animated-input{
 		&__input{
-			height: 100px;
 		}
 		&__label{
 			font-size: 24px;

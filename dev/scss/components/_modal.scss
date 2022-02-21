@@ -1,14 +1,25 @@
 .wj-modal {
 	background: #222;
-	border: 1px solid #707070;
 	padding: 30px 20px;
 	max-width: 260px;
-
+	position: relative;
+	.mfp-close{
+		padding: 0;
+		margin: 10px;
+		width: 15px;
+		height: 15px;
+	}
 }
 
 @media (min-width: $bp-sm) {
 	.wj-modal {
+		.mfp-close{
+			margin: 30px;
+			width: 20px;
+			height: 20px;
+		}
 		padding: 30px;
+
 		max-width: 580px;
 
 	}
@@ -20,22 +31,29 @@
 		position: relative;
 		padding: 70px 60px;
 		max-width: 690px;
-		.mfp-close {
-			color: rgba(255,255,255, .3);
+		.mfp-close{
+			margin-top: 42px;
+			margin-right: 36px ;
 		}
 	}
 }
 
 @media (min-width: $bp-lg) {
 	.wj-modal {
-		padding: 80px;
+		.mfp-close{
+			margin-right: 32px ;
+		}
+		padding: 76px 82px;
 		max-width: 900px;
 	}
 }
 
 @media(min-width: $bp-xl) {
 	.wj-modal {
-		padding: 80px 100px;
+		.mfp-close{
+			margin-right: 42px ;
+		}
+		padding: 76px 96px;
 		max-width: 930px;
 
 	}

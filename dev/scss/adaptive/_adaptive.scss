@@ -1,6 +1,19 @@
+@media (min-width: $bp-xs) {
+	.block-3 {
+		&__left {
+			background-position: 0;
+		}
+	}
+}
+
 @media (min-width: $bp-sm) {
 	.block-1 {
 		padding-top: 50px;
+		background-position-y: 30px;
+
+		&__block-title {
+			margin-bottom: 15px;
+		}
 
 		&__astronaut {
 			left: 375px;
@@ -11,17 +24,51 @@
 			max-width: 530px;
 		}
 	}
-
-
+	.block-3 {
+		&__left {
+			background-position: 0;
+		}
+	}
 	.block-5 {
+		.icons {
+			margin-bottom: -70px;
+
+			.icon {
+				margin-bottom: 70px;
+			}
+		}
+
+		.monitor-text {
+			&_top {
+				margin: 30px auto 30px;
+			}
+
+			&_bottom {
+				margin: 30px auto 30px;
+			}
+		}
+
+		&__block-title {
+			//margin: 0 auto 30px;
+		}
+
+		.ticker-container{
+			margin-bottom: 70px;
+			margin-top: -12px;
+		}
 		.tickers {
+			margin-top: 12px;
 			&__ticker {
 				font-size: 50px;
-				line-height: 70px;
+				line-height: 50px;
 				letter-spacing: 1px;
 			}
 		}
 
+	}
+	.block-7 {
+		min-height: auto;
+		background-position-y: 0;
 	}
 }
 
@@ -40,16 +87,18 @@
 
 	.block-1 {
 		padding-top: 70px;
+		background-position-y: -80px;
 
 		&__ready {
 			display: block;
 			position: absolute;
-			bottom: 40px;
+			bottom: 30px;
 			left: 50%;
 			transform: translateX(-50%);
 		}
 
 		&__block-title {
+			margin-bottom: 30px;
 			padding-top: 200px;
 			font-size: 70px;
 			line-height: 85px;
@@ -65,20 +114,26 @@
 	}
 
 	.block-5 {
+
 		.monitor-text {
 			&_top {
-				margin-bottom: 50px;
+				margin: 50px auto 50px;
 			}
 
 			&_bottom {
-				margin-top: 50px;
+				margin: 50px auto 50px;
 			}
+		}
+		.ticker-container{
+			margin-bottom: 100px;
+			margin-top: -20px;
 		}
 
 		.tickers {
+			margin-top: 20px;
 			&__ticker {
 				font-size: 60px;
-				line-height: 70px;
+				line-height: 60px;
 				letter-spacing: 1.2px;
 			}
 		}
@@ -95,8 +150,8 @@
 		}
 	}
 
-
 	.block-1 {
+		background-position-y: 0;
 
 		&__block-title {
 			padding-top: 0;
@@ -124,27 +179,43 @@
 		}
 	}
 
-	.block_4 {
-
+	.block-3 {
+		&__left {
+			background-position: -100px 0;
+		}
 	}
 
 	.block-5 {
 		.monitor-text {
 			&_top {
-				margin-bottom: 60px;
+				margin: 60px auto 60px;
 			}
 
 			&_bottom {
-				margin-top: 60px;
+				margin: 60px auto 60px;
 			}
 		}
 
+		.ticker-container{
+			margin-bottom: 150px;
+		}
+
+	}
+}
+
+// костыль
+@media (min-width: 1221px) {
+	.block-3 {
+		&__left {
+			background-position: 0;
+		}
 	}
 }
 
 @media (min-width: $bp-xl) {
 
 	.block-1 {
+		background-position-y: 30px;
 
 		&__block-title {
 			font-size: 80px;
@@ -157,16 +228,20 @@
 		}
 	}
 
-
+	.block-3 {
+		&__left {
+			background-position: 0;
+		}
+	}
 	.block-5 {
 
 		.monitor-text {
 			&_top {
-				margin-bottom: 60px;
+				margin: 50px auto 50px;
 			}
 
 			&_bottom {
-				margin-top: 60px;
+				margin: 50px auto 50px;
 			}
 		}
 	}
