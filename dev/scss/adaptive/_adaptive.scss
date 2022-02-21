@@ -52,10 +52,15 @@
 			//margin: 0 auto 30px;
 		}
 
+		.ticker-container{
+			margin-bottom: 70px;
+			margin-top: -12px;
+		}
 		.tickers {
+			margin-top: 12px;
 			&__ticker {
 				font-size: 50px;
-				line-height: 70px;
+				line-height: 50px;
 				letter-spacing: 1px;
 			}
 		}
@@ -119,11 +124,16 @@
 				margin: 50px auto 50px;
 			}
 		}
+		.ticker-container{
+			margin-bottom: 100px;
+			margin-top: -20px;
+		}
 
 		.tickers {
+			margin-top: 20px;
 			&__ticker {
 				font-size: 60px;
-				line-height: 70px;
+				line-height: 60px;
 				letter-spacing: 1.2px;
 			}
 		}
@@ -184,6 +194,10 @@
 			&_bottom {
 				margin: 60px auto 60px;
 			}
+		}
+
+		.ticker-container{
+			margin-bottom: 150px;
 		}
 
 	}

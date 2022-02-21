@@ -141,14 +141,20 @@ body {
 	&__block-title {
 		margin-bottom: 0;
 	}
+	.ticker-container{
+		margin-bottom: 50px;
+		margin-top: -8px;
+	}
 
 	.tickers {
+		margin-top: 8px;
 		&__ticker {
 			display: inline-block;
-			font: 30px/70px $font-secondary;
+			font-family: $font-secondary;
+			font-size: 30px;
+			line-height: 30px;
 			letter-spacing: 0.6px;
 			color: #555555;
-			width: 300%;
 
 			span {
 				color: $color-secondary;
