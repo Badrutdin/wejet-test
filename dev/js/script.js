@@ -121,8 +121,10 @@ function setSlideStyle(event, modifier) {
 $(document).ready(function () {
 
   $('.popup').magnificPopup({
-    tClose: 'Закрыть',
-    closeMarkup:'<div class="mfp-close"><img src="/images/Icon ionic-md-close.png" alt=""></div>'
+    closeMarkup:'<div ><img  class="mfp-close" title="Закрыть"  src="/images/Icon ionic-md-close.png" alt=""></div>'
+  });
+  $('.mfp-close').on( "click", function() {
+    $.magnificPopup.close();
   });
   const $slider = $('.wj-slider-container')
   $slider.owlCarousel({
