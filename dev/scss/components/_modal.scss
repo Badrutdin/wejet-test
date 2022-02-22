@@ -5,7 +5,8 @@
 	position: relative;
 	.mfp-close{
 		padding: 0;
-		margin: 10px;
+		top: 10px;
+		right: 10px;
 		width: 15px;
 		height: 15px;
 	}
@@ -14,7 +15,8 @@
 @media (min-width: $bp-sm) {
 	.wj-modal {
 		.mfp-close{
-			margin: 30px;
+			top: 30px;
+			right: 30px;
 			width: 20px;
 			height: 20px;
 		}
@@ -32,8 +34,8 @@
 		padding: 70px 60px;
 		max-width: 690px;
 		.mfp-close{
-			margin-top: 42px;
-			margin-right: 36px ;
+			top: 42px;
+			right: 36px ;
 		}
 	}
 }
@@ -41,7 +43,7 @@
 @media (min-width: $bp-lg) {
 	.wj-modal {
 		.mfp-close{
-			margin-right: 32px ;
+			right: 32px ;
 		}
 		padding: 76px 82px;
 		max-width: 900px;
@@ -51,7 +53,7 @@
 @media(min-width: $bp-xl) {
 	.wj-modal {
 		.mfp-close{
-			margin-right: 42px ;
+			right: 42px ;
 		}
 		padding: 76px 96px;
 		max-width: 930px;

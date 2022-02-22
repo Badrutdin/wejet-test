@@ -3,6 +3,7 @@ body {
 	position: relative;
 	overflow-x: hidden;
 	font-family: $font-primary;
+	font-weight: 500;
 	font-size: 14px;
 	color: $color-text;
 }
@@ -121,13 +122,6 @@ body {
 
 .block-5 {
 	background: #222222;
-		.icons{
-			margin-bottom: -50px;
-			.icon{
-				margin-bottom: 50px;
-			}
-		}
-
 	.monitor-text {
 		&_top {
 			margin: 26px auto 26px;
@@ -141,30 +135,7 @@ body {
 	&__block-title {
 		margin-bottom: 0;
 	}
-	.ticker-container{
-		margin-bottom: 50px;
-		margin-top: -8px;
-	}
 
-	.tickers {
-		margin-top: 8px;
-		&__ticker {
-			display: inline-block;
-			font-family: $font-secondary;
-			font-size: 30px;
-			line-height: 30px;
-			letter-spacing: 0.6px;
-			color: #555555;
-
-			span {
-				color: $color-secondary;
-			}
-
-			&:not(:last-child) {
-				margin-bottom: 20px;
-			}
-		}
-	}
 
 }
 .block-6{

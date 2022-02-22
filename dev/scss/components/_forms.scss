@@ -4,35 +4,39 @@
 }
 
 .form-fields {
-	margin-top: -46px;
+	margin-bottom: -14px;
+
+	&__field {
+		margin-bottom: 14px;
+	}
+}
+
+.form-controls {
+	margin-top: 46px;
 	.btn {
 		max-width: 200px;
-		margin-top: 46px;
-	}
-	&__field {
-			margin-top: 46px;
 	}
 }
 
 @media (min-width: $bp-sm) {
-	.form-fields {
+	.form-controls {
 		.btn {
 			max-width: 344px;
-		}
-		&__field {
 		}
 	}
 }
 
 @media (min-width: $bp-md) {
 	.form-fields {
-		margin-top: -70px;
+		margin-bottom: -30px;
+
+		&__field {
+			margin-bottom: 30px;
+		}
+	}
+	.form-controls {
 		.btn {
 			max-width: 364px;
-			margin-top: 70px;
-		}
-		&__field {
-			margin-top: 70px;
 		}
 	}
 }

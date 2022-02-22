@@ -150,19 +150,12 @@ $(document).ready(function () {
   $slider.on('changed.owl.carousel', function (event) {
   setSlideStyle(event,'wj-slide_secondary')
   })
-  const tickerSpeed = 50
-  $('[wj-ticker="left"]').liMarquee({
-    scrollamount: tickerSpeed,
-    direction: 'left',
-    hoverstop: false
+  const tickerSpeed = 100
+  $('.tickers__ticker').marquee({
+    speed:tickerSpeed,
+    duplicated:true,
+    startVisible:true,
   });
-  $('[wj-ticker="right"]').liMarquee({
-    scrollamount: tickerSpeed,
-    direction: 'right',
-    hoverstop: false
-  });
-
-
 
   $(document).on('click', '[data-scroll]', function (e) {
     e.preventDefault();
@@ -186,6 +179,10 @@ $(document).ready(function () {
   $(document).on('input', '.animated-input__input', function () {
     setFieldState($(this), 'changed')
   });
+  $(document).on('click', '[href="#feedback"]', function () {
+    setFieldState($('.animated-input__input'), 'changed')
+  });
+
 
 
   // FORM

@@ -1,0 +1,58 @@
+.ticker-container{
+	margin-bottom: 50px;
+	width: 300%;
+}
+
+.tickers {
+	&__ticker {
+		width: 100%;
+		max-width: 200%;
+		display: inline-block;
+		font-family: $font-secondary;
+		font-size: 30px;
+		line-height: 30px;
+		letter-spacing: 0.6px;
+		color: #555555;
+
+		span {
+			color: $color-secondary;
+		}
+
+		&:not(:last-child) {
+			margin-bottom: 20px;
+		}
+	}
+}
+
+
+
+@media (min-width: $bp-sm) {
+	.ticker-container{
+		margin-bottom: 70px;
+	}
+	.tickers {
+		&__ticker {
+			font-size: 50px;
+			line-height: 50px;
+			letter-spacing: 1px;
+		}
+	}
+}
+
+@media (min-width: $bp-md) {
+	.ticker-container{
+		margin-bottom: 100px;
+	}
+	.tickers {
+		&__ticker {
+			font-size: 60px;
+			line-height: 60px;
+			letter-spacing: 1.2px;
+		}
+	}
+}
+@media (min-width: $bp-lg) {
+	.ticker-container{
+		margin-bottom: 150px;
+	}
+}

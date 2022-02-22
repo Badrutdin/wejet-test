@@ -30,12 +30,9 @@
 		}
 	}
 	.block-5 {
-		.icons {
-			margin-bottom: -70px;
 
-			.icon {
-				margin-bottom: 70px;
-			}
+		.monitor {
+			width: 400px;
 		}
 
 		.monitor-text {
@@ -48,22 +45,6 @@
 			}
 		}
 
-		&__block-title {
-			//margin: 0 auto 30px;
-		}
-
-		.ticker-container{
-			margin-bottom: 70px;
-			margin-top: -12px;
-		}
-		.tickers {
-			margin-top: 12px;
-			&__ticker {
-				font-size: 50px;
-				line-height: 50px;
-				letter-spacing: 1px;
-			}
-		}
 
 	}
 	.block-7 {
@@ -114,6 +95,9 @@
 	}
 
 	.block-5 {
+		.monitor {
+			width: 700px;
+		}
 
 		.monitor-text {
 			&_top {
@@ -124,19 +108,7 @@
 				margin: 50px auto 50px;
 			}
 		}
-		.ticker-container{
-			margin-bottom: 100px;
-			margin-top: -20px;
-		}
 
-		.tickers {
-			margin-top: 20px;
-			&__ticker {
-				font-size: 60px;
-				line-height: 60px;
-				letter-spacing: 1.2px;
-			}
-		}
 
 	}
 }
@@ -186,6 +158,10 @@
 	}
 
 	.block-5 {
+		.monitor {
+			width: 750px;
+		}
+
 		.monitor-text {
 			&_top {
 				margin: 60px auto 60px;
@@ -195,11 +171,6 @@
 				margin: 60px auto 60px;
 			}
 		}
-
-		.ticker-container{
-			margin-bottom: 150px;
-		}
-
 	}
 }
 
@@ -217,12 +188,6 @@
 	.block-1 {
 		background-position-y: 30px;
 
-		&__block-title {
-			font-size: 80px;
-			line-height: 96px;
-			letter-spacing: 1.4px;
-		}
-
 		&__astronaut {
 			left: 790px;
 		}
@@ -237,11 +202,11 @@
 
 		.monitor-text {
 			&_top {
-				margin: 50px auto 50px;
+				margin: 70px auto 70px;
 			}
 
 			&_bottom {
-				margin: 50px auto 50px;
+				margin: 70px auto 70px;
 			}
 		}
 	}

@@ -13,7 +13,7 @@
 	overflow: hidden;
 	min-height: 355px;
 	color: rgba(255, 255, 255, .7);
-	background-color: #EEF5F6;
+	background-color: #1f2132;
 	background-position: 0, 0, 0, 100px, 0, 0;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -34,6 +34,7 @@
 
 	&__small-text {
 		color: rgba(255, 255, 255, .3);
+		transition: $transition_speed ease-out;
 	}
 
 	&:hover, &:focus {
@@ -42,8 +43,7 @@
 		color: rgba(255, 255, 255, 1);
 		cursor: pointer;
 
-		&__small-text {
-			transition: $transition_speed ease-out;
+		.card__small-text {
 			color: inherit;
 		}
 	}
@@ -59,23 +59,7 @@
 	}
 }
 
-@media (min-width: $bp-md) {
-	.card {
-		min-height: 200px;
-	}
-}
-
 @media (min-width: $bp-lg) {
-	.card {
-		min-height: 464px;
-
-		&__text {
-			bottom: 70px;
-		}
-	}
-}
-
-@media (min-width: $bp-xl) {
 	.card {
 		min-height: 464px;
 
