@@ -121,11 +121,24 @@ function setSlideStyle(event, modifier) {
 $(document).ready(function () {
 
   $('.popup').magnificPopup({
-    closeMarkup:'<div ><img  class="mfp-close" title="Закрыть"  src="/images/Icon ionic-md-close.png" alt=""></div>'
+    callbacks: {
+      open: function () {
+        const magnificPopup = $.magnificPopup.instance;
+        const content = magnificPopup.content.get(0);
+        const inputs = $(content).find('.animated-input__input');
+
+        inputs.each(function () {
+          if (this.value.length) {
+            setFieldState($(this), 'changed')
+          }
+        });
+      }
+    }
+    // closeMarkup:'<div ><img  class="mfp-close" title="Закрыть"  src="/images/Icon ionic-md-close.png" alt=""></div>'
   });
-  $('.mfp-close').on( "click", function() {
-    $.magnificPopup.close();
-  });
+  // $('.mfp-close').on( "click", function() {
+  //   $.magnificPopup.close();
+  // });
   const $slider = $('.wj-slider-container')
   $slider.owlCarousel({
     nav: false,
@@ -167,7 +180,17 @@ $(document).ready(function () {
     }
   })
 
-  $('input[type=tel]').mask('+7 (000) 000 00 00');
+  // настройки телефонной маски. Предусматривают как ввод через +7, так и через 8
+  const phoneMaskOptions = {
+    translation: {
+      r: {
+        pattern: /[+]/,
+        optional: true
+      }
+    }
+  };
+
+  $('input[type=tel]').mask('r0 (000) 000-00-00', phoneMaskOptions);
 
   $(document).on('focus', '.animated-input__input', function () {
     setFieldState($(this), 'focusIn')
@@ -178,9 +201,6 @@ $(document).ready(function () {
   });
   $(document).on('input', '.animated-input__input', function () {
     setFieldState($(this), 'changed')
-  });
-  $(document).on('click', '[href="#feedback"]', function () {
-    setFieldState($('.animated-input__input'), 'changed')
   });
 
 
