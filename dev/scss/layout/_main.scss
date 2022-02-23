@@ -1,7 +1,6 @@
 
 body {
 	position: relative;
-	overflow-x: hidden;
 	font-family: $font-primary;
 	font-weight: 500;
 	font-size: 14px;
@@ -24,6 +23,10 @@ body {
 		font-size: 40px;
 		line-height: 48px;
 		letter-spacing: 0.8px;
+		.astronaut-title{
+			position: relative;
+			z-index: 2;
+		}
 	}
 
 	&__astronaut {
@@ -122,6 +125,7 @@ body {
 
 .block-5 {
 	background: #222222;
+	overflow-x: hidden;
 	.monitor-text {
 		&_top {
 			margin: 26px auto 26px;

@@ -119,7 +119,10 @@ function setSlideStyle(event, modifier) {
 }
 
 $(document).ready(function () {
-
+  $('.block-1__astronaut').paroller({
+    factor: -0.5,            // multiplier for scrolling speed and offset
+    type: 'foreground',     // background, foreground
+  });
   $('.popup').magnificPopup({
     closeMarkup:'<div ><img  class="mfp-close" title="Закрыть"  src="/images/Icon ionic-md-close.png" alt=""></div>'
   });

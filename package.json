@@ -43,6 +43,7 @@
     "jquery-mask-plugin": "^1.14.16",
     "jquery.marquee": "^1.6.0",
     "magnific-popup": "^1.1.0",
-    "owl.carousel": "^2.3.4"
+    "owl.carousel": "^2.3.4",
+    "paroller.js": "^1.4.7"
   }
 }
