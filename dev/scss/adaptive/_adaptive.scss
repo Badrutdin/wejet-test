@@ -28,6 +28,10 @@
 		&__left {
 			background-position: 0;
 		}
+		&__banner {
+			height: 290px;
+		}
+
 	}
 	.block-5 {
 
@@ -94,6 +98,11 @@
 
 	}
 
+	.block-3 {
+		&__banner {
+			height: 438px;
+		}
+	}
 	.block-5 {
 		.monitor {
 			width: 700px;
@@ -152,6 +161,20 @@
 	}
 
 	.block-3 {
+		&__aside {
+			position: relative;
+		}
+
+		&__banner {
+			background-position: center right !important; // временно, не используем без необходимости
+			position: absolute;
+			top: 0;
+			right: 0;
+			width: 50vw;
+			transform: none;
+			left: auto;
+			height: 100%;
+		}
 		&__left {
 			background-position: -100px 0;
 		}
