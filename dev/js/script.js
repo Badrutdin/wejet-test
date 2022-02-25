@@ -118,11 +118,29 @@ function setSlideStyle(event, modifier) {
   }
 }
 
+
 $(document).ready(function () {
-  $('.block-1__astronaut').paroller({
-    factor: -0.5,
-    type: 'foreground',
-  });
+  if (window.ScrollMagic) {
+    const controller = new ScrollMagic.Controller();
+
+    new ScrollMagic.Scene({
+      triggerElement: '#block_1',
+      offset: 0
+    })
+      .addTo(controller)
+      .on('update', function (e) {
+        const section = e.target.triggerElement();
+        const astronaut = section.querySelector('.block-1__astronaut');
+
+        if (astronaut) {
+          const rect = section.getBoundingClientRect();
+          const offset = Math.abs(rect.top) >= rect.height * 0.66 ? rect.height * 0.66 : Math.abs(rect.top);
+
+          astronaut.style.transform = `translateY(${(offset / 2)}px)`;
+        }
+      })
+  }
+
   $('.popup').magnificPopup({
     tClose:'Закрыть',
     callbacks: {
