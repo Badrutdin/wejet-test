@@ -13,17 +13,6 @@
 
 .form-controls {
 	margin-top: 46px;
-	.btn {
-		max-width: 200px;
-	}
-}
-
-@media (min-width: $bp-sm) {
-	.form-controls {
-		.btn {
-			max-width: 344px;
-		}
-	}
 }
 
 @media (min-width: $bp-md) {
@@ -36,9 +25,7 @@
 	}
 	.form-controls {
 		margin-top: 70px;
-		.btn {
-			max-width: 364px;
-		}
+
 	}
 }
 

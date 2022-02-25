@@ -1,0 +1,56 @@
+.block-3 {
+	background-color: #222222;
+	&__text{
+		padding-left: 12px;
+		padding-right: 12px;
+	}
+	&__banner {
+		height: 400px;
+		width: 100vw;
+		transform: translateX(-50%);
+		left: 50%;
+		background-position: center;
+		position: relative;
+		padding: 0;
+		background-color: #4A2B39;
+		background-image: url('../../images/nasa-rTZW4f02zY8-unsplash-resize.jpg');
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
+
+}
+@media (min-width: 640px) {
+	.block-3 {
+		&__banner {
+			height: 290px;
+		}
+
+	}
+
+}
+@media (min-width: 768px) {
+	.block-3 {
+		&__banner {
+			height: 438px;
+		}
+	}
+
+}
+@media (min-width: 1024px) {
+	.block-3 {
+		&__aside {
+			position: relative;
+		}
+		&__banner {
+			background-position: center right;
+			position: absolute;
+			top: 0;
+			right: 0;
+			width: 50vw;
+			transform: none;
+			left: auto;
+			height: 100%;
+		}
+	}
+
+}

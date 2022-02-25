@@ -1,11 +1,9 @@
 .btn {
 	position: relative;
-    font: 16px/50px"Montserrat",sans-serif;
+	font-size: 16px;
     color: #fff;
     border: 1px solid #fff;
     width: 100%;
-    max-width: 247px;
-    height: 68px;
     transition: transform .2s ease-out;
     display: inline-flex;
     text-align: center;
@@ -35,36 +33,55 @@
 		}
 	}
 }
-/**
-* Disabled
-*/
-
+.btn_default{
+	max-width: 247px;
+	height: 68px;
+}
+.btn_in-form {
+	max-width: 200px;
+	height: 68px;
+}
+.btn_blue{
+	border-color: #00cae5;
+	&:hover, &:focus {
+		background-color: #00cae5;
+	}
+	&:before{
+		border-color: #00cae5;
+	}
+}
 .btn_disabled {
 	opacity: 0.5;
 	cursor: default;
 }
 
 @media (min-width: $bp-sm) {
-	.btn {
+	.btn_default {
 		max-width: 263px;
+	}
+	.btn_in-form {
+		max-width: 344px;
 	}
 }
 
 @media (min-width: $bp-md) {
-	.btn {
+	.btn_default {
 		max-width: 320px;
+	}
+	.btn_in-form {
+		max-width: 364px;
 	}
 }
 
 @media (min-width: $bp-lg) {
-	.btn {
+	.btn_default {
 		max-width: 354px;
 		height: 68px;
 	}
 }
 
 @media (min-width: $bp-xl) {
-	.btn {
+	.btn_default {
 		max-width: 354px;
 		height: 68px;
 	}

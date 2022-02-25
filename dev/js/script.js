@@ -124,6 +124,7 @@ $(document).ready(function () {
     type: 'foreground',
   });
   $('.popup').magnificPopup({
+    tClose:'Закрыть',
     callbacks: {
       open: function () {
         const magnificPopup = $.magnificPopup.instance;
@@ -137,8 +138,11 @@ $(document).ready(function () {
         });
       }
     },
-    closeMarkup:'<button  type="button" class="mfp-close" title="Закрыть"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4.99 3.99a1 1 0 0 0-.697 1.717L10.586 12l-6.293 6.293a1 1 0 1 0 1.414 1.414L12 13.414l6.293 6.293a1 1 0 1 0 1.414-1.414L13.414 12l6.293-6.293a1 1 0 0 0-.727-1.717 1 1 0 0 0-.687.303L12 10.586 5.707 4.293a1 1 0 0 0-.717-.303z"/></svg></button>',
+    closeMarkup:'<button  type="button" class="mfp-close" title="%title%"><svg xmlns="http://www.w3.org/2000/svg" class="mfp-close__icon" viewBox="0 0 512 512"><path  stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="32" d="M368 368L144 144M368 144L144 368"/></svg></button>',
   });
+  $(document).on('click', '.wj-modal .mfp-close__icon', function(){
+    $(this).closest('.mfp-close').click()
+  })
   const $slider = $('.wj-slider-container')
   $slider.owlCarousel({
     nav: false,

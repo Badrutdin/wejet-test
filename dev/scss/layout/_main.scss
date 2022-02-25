@@ -19,6 +19,7 @@ body {
 	position: relative;
 
 	&__block-title {
+		position: relative;
 		margin-bottom: 20px;
 		font-size: 40px;
 		line-height: 48px;
@@ -32,8 +33,8 @@ body {
 	&__astronaut {
 		position: absolute;
 		width: 125px;
-		left: 165px;
-		top: 175px;
+		left: 140px;
+		top: 0;
 		z-index: 1;
 
 		img {
@@ -105,32 +106,16 @@ body {
 	}
 }
 
-.block-3 {
-	background-color: #222222;
-	&__banner {
-		height: 400px;
-		width: 100vw;
-		transform: translateX(-50%);
-		left: 50%;
-		position: relative;
-	}
-
-	&__left {
-		padding: 0;
-		background-color: #4A2B39;
-		background-image: url('../../images/nasa-rTZW4f02zY8-unsplash-resize.jpg');
-		background-size: cover;
-		background-position:-80px 0;
-		background-repeat: no-repeat;
-	}
-
-}
 
 .block_4 {
+	&:before{
+		content: '';
+	}
 	background: linear-gradient(160deg, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0) 50%, rgba(238, 245, 246, 1) 50%);
 }
 
 .block-5 {
+
 	background: #222222;
 	overflow-x: hidden;
 	.monitor-text {
@@ -168,4 +153,28 @@ body {
 }
 .str_wrap{
 	background-color: inherit;
+}
+
+.bg-paralax{
+	position: fixed;
+	width:100vw;
+}
+.bg-paralax-inner{
+	position: relative;
+	width: 670px;
+	left: 50%;
+	transform: translateX(-50%);
+	img{
+	}
+	.text{
+		position: absolute;
+		top: 120px;
+		left: 280px;
+		color: red;
+		//font-family: $font_secondary;
+		font-size: 40px;
+	}
+}
+.section{
+	z-index: 0;
 }
