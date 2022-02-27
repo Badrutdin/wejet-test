@@ -6,9 +6,9 @@ body {
 	font-size: 14px;
 	color: $color-text;
 }
- .cards{
-	 margin-bottom: -30px;
- }
+.cards{
+	margin-bottom: -30px;
+}
 .block-1 {
 	min-height: 100vh;
 	padding-top: 100px;
@@ -177,4 +177,37 @@ body {
 }
 .section{
 	z-index: 0;
+}
+
+.monitor {
+	position: relative;
+}
+
+.monitor__decor {
+
+	position: relative;
+	z-index: 1;
+}
+
+.monitor__inner {
+	position: absolute;
+	top: 5%;
+	left: 7%;
+	right: 7%;
+	bottom: 21%;
+	background-size: cover;
+	background-attachment: fixed; // не работает в мобильном iOS
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.monitor__layer {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-repeat: no-repeat;
+	background-image:url("data:image/svg+xml;utf8,<svg viewBox='-300 -160 840 170' xmlns='http://www.w3.org/2000/svg'>	<style>	.Rrrrr {width:100%; height:100%; font: normal normal normal 20px/70px Russo One; fill: white; }	</style><text class='Rrrrr'></text>	</svg>");
+	background-attachment: fixed; // не работает в мобильном iOS
 }

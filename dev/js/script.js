@@ -118,11 +118,47 @@ function setSlideStyle(event, modifier) {
   }
 }
 
+
 $(document).ready(function () {
-  $('.block-1__astronaut').paroller({
-    factor: -0.5,
-    type: 'foreground',
-  });
+  function get_name_browser(){
+    // получаем данные userAgent
+    var ua = navigator.userAgent;
+    // с помощью регулярок проверяем наличие текста,
+    // соответствующие тому или иному браузеру
+    if (ua.search(/Chrome/) > 0) return 'Google Chrome';
+    if (ua.search(/Firefox/) > 0) return 'Firefox';
+    if (ua.search(/Opera/) > 0) return 'Opera';
+    if (ua.search(/Safari/) > 0) return 'Safari';
+    if (ua.search(/MSIE/) > 0) return 'Internet Explorer';
+    return 'Не определен';
+  }
+  if(get_name_browser() === 'Safari') {
+    console.log('Safari')
+    const bgLayer = document.querySelector('.monitor__inner')
+    bgLayer.style.backgroundAttachment = 'inherit'
+  }
+    if (window.ScrollMagic) {
+      const controller = new ScrollMagic.Controller();
+
+      new ScrollMagic.Scene({
+        triggerElement: '#block_1',
+        offset: 0
+      })
+        .addTo(controller)
+        .on('update', function (e) {
+          const section = e.target.triggerElement();
+          const astronaut = section.querySelector('.block-1__astronaut');
+
+          if (astronaut) {
+            const rect = section.getBoundingClientRect();
+            const offset = Math.abs(rect.top) >= rect.height * 0.66 ? rect.height * 0.66 : Math.abs(rect.top);
+
+            astronaut.style.transform = `translateY(${(offset / 2)}px)`;
+          }
+        })
+    }
+
+
   $('.popup').magnificPopup({
     tClose:'Закрыть',
     callbacks: {
@@ -165,7 +201,7 @@ $(document).ready(function () {
     }
   });
   $slider.on('changed.owl.carousel', function (event) {
-  setSlideStyle(event,'wj-slide_secondary')
+    setSlideStyle(event,'wj-slide_secondary')
   })
   const tickerSpeed = 100
   $('.tickers__ticker').marquee({
