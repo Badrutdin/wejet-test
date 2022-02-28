@@ -1,15 +1,18 @@
 function setFieldState(input, state) {
+  const animatedInput = input.closest('.animated-input').get(0);
+  const label = $(animatedInput).find('.animated-input__label').get(0);
+
   if (state === 'focusIn') {
-    input.closest('.animated-input').find('.animated-input__label').addClass('animated-input__label_focus')
+    $(label).addClass('animated-input__label_focus')
   } else if (state === 'focusOut') {
     if (input.val() === '') {
-      input.closest('.animated-input').find('.animated-input__label').removeClass('animated-input__label_focus')
+      $(label).removeClass('animated-input__label_focus')
     }
   } else if (state === 'changed') {
     if (input.val() !== '') {
-      input.closest('.animated-input').find('.animated-input__label').addClass('animated-input__label_changed')
+      $(label).addClass('animated-input__label_changed')
     } else {
-      input.closest('.animated-input').find('.animated-input__label').removeClass('animated-input__label_changed')
+      $(label).removeClass('animated-input__label_changed')
     }
   }
 }
@@ -118,46 +121,107 @@ function setSlideStyle(event, modifier) {
   }
 }
 
+function getNameBrowser(){
+  // получаем данные userAgent
+  var ua = navigator.userAgent;
+  // с помощью регулярок проверяем наличие текста,
+  // соответствующие тому или иному браузеру
+  if (ua.search(/Chrome/) > 0) return 'Google Chrome';
+  if (ua.search(/Firefox/) > 0) return 'Firefox';
+  if (ua.search(/Opera/) > 0) return 'Opera';
+  if (ua.search(/Safari/) > 0) return 'Safari';
+  if (ua.search(/MSIE/) > 0) return 'Internet Explorer';
 
-$(document).ready(function () {
-  function get_name_browser(){
-    // получаем данные userAgent
-    var ua = navigator.userAgent;
-    // с помощью регулярок проверяем наличие текста,
-    // соответствующие тому или иному браузеру
-    if (ua.search(/Chrome/) > 0) return 'Google Chrome';
-    if (ua.search(/Firefox/) > 0) return 'Firefox';
-    if (ua.search(/Opera/) > 0) return 'Opera';
-    if (ua.search(/Safari/) > 0) return 'Safari';
-    if (ua.search(/MSIE/) > 0) return 'Internet Explorer';
-    return 'Не определен';
-  }
-  if(get_name_browser() === 'Safari') {
-    console.log('Safari')
-    const bgLayer = document.querySelector('.monitor__inner')
-    bgLayer.style.backgroundAttachment = 'inherit'
-  }
-    if (window.ScrollMagic) {
-      const controller = new ScrollMagic.Controller();
+  return '';
+}
 
-      new ScrollMagic.Scene({
-        triggerElement: '#block_1',
-        offset: 0
-      })
-        .addTo(controller)
-        .on('update', function (e) {
-          const section = e.target.triggerElement();
-          const astronaut = section.querySelector('.block-1__astronaut');
+function getViewport () {
+  let viewportWidth = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+  let viewportHeight = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
 
-          if (astronaut) {
-            const rect = section.getBoundingClientRect();
-            const offset = Math.abs(rect.top) >= rect.height * 0.66 ? rect.height * 0.66 : Math.abs(rect.top);
+  return {
+    width: viewportWidth,
+    height: viewportHeight
+  };
+}
 
-            astronaut.style.transform = `translateY(${(offset / 2)}px)`;
-          }
-        })
+function throttle (f, wait) {
+  let isThrottling = false;
+  let hasTrailingCall = false;
+  let lastContext;
+  let lastArgs;
+  let lastResult;
+
+  const invokeFunc = (context, args) => {
+    lastResult = f.apply(context, args);
+    isThrottling = true;
+
+    setTimeout(() => {
+      isThrottling = false;
+
+      if (hasTrailingCall) {
+        invokeFunc(lastContext, lastArgs);
+
+        lastContext = undefined;
+        lastArgs = undefined;
+        hasTrailingCall = false;
+      }
+    }, wait);
+  };
+
+  return function (...args) {
+    if (!isThrottling) {
+      invokeFunc(this, args);
+    } else {
+      hasTrailingCall = true;
+      lastContext = true;
+      lastArgs = args;
     }
 
+    return lastResult;
+  };
+}
+
+$(document).ready(function () {
+  const handleSafariBackgroundFixResize = throttle(function () {
+    handleSafariBackgroundFix();
+  }, 500);
+
+  handleSafariBackgroundFix();
+
+  function handleSafariBackgroundFix () {
+    const viewport = getViewport();
+    const bgLayer = document.querySelector('.monitor__inner');
+
+    if (viewport.width < 1024 && getNameBrowser() === 'Safari') {
+      bgLayer.style.backgroundAttachment = 'inherit';
+    } else {
+      bgLayer.style.backgroundAttachment = '';
+    }
+  }
+
+  window.addEventListener('resize', handleSafariBackgroundFixResize);
+
+  if (window.ScrollMagic) {
+    const controller = new ScrollMagic.Controller();
+
+    new ScrollMagic.Scene({
+      triggerElement: '#block_1',
+      offset: 0
+    })
+      .addTo(controller)
+      .on('update', function (e) {
+        const section = e.target.triggerElement();
+        const astronaut = section.querySelector('.block-1__astronaut');
+
+        if (astronaut) {
+          const rect = section.getBoundingClientRect();
+          const offset = Math.abs(rect.top) >= rect.height * 0.66 ? rect.height * 0.66 : Math.abs(rect.top);
+
+          astronaut.style.transform = `translateY(${(offset / 2)}px)`;
+        }
+      })
+  }
 
   $('.popup').magnificPopup({
     tClose:'Закрыть',
